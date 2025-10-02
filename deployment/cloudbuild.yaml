@@ -1,0 +1,49 @@
+steps:
+  # 1. Build the Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - '${_GCP_REGION}-docker.pkg.dev/${PROJECT_ID}/${_SERVICE_NAME}/${_SERVICE_NAME}:latest'
+      - './backend'
+    id: 'Build'
+
+  # 2. Push the Docker image to Google Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - '${_GCP_REGION}-docker.pkg.dev/${PROJECT_ID}/${_SERVICE_NAME}/${_SERVICE_NAME}:latest'
+    id: 'Push'
+
+  # 3. Deploy to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - '${_SERVICE_NAME}'
+      - '--image=${_GCP_REGION}-docker.pkg.dev/${PROJECT_ID}/${_SERVICE_NAME}/${_SERVICE_NAME}:latest'
+      - '--region=${_GCP_REGION}'
+      - '--platform=managed'
+      - '--allow-unauthenticated' # Use IAM for security in production
+      - '--service-account=${_SERVICE_ACCOUNT_EMAIL}'
+      - '--set-env-vars-from-file=backend/.env'
+      - '--min-instances=0' # Scale to zero for cost savings
+      - '--max-instances=2' # Adjust as needed
+      - '--cpu=1'
+      - '--memory=1Gi' # sentence-transformers can be memory intensive
+      - '--timeout=300s' # Increase timeout for model loading and processing
+    id: 'Deploy'
+
+# Define substitutions for dynamic values
+substitutions:
+  _GCP_REGION: 'us-central1'
+  _SERVICE_NAME: 'portfolio-ai-backend'
+  _SERVICE_ACCOUNT_EMAIL: 'portfolio-ai-sa@${PROJECT_ID}.iam.gserviceaccount.com'
+
+# Store the built image in Artifact Registry
+images:
+  - '${_GCP_REGION}-docker.pkg.dev/${PROJECT_ID}/${_SERVICE_NAME}/${_SERVICE_NAME}:latest'
+
+# Set deployment timeout
+timeout: '1200s'
