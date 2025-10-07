@@ -13,13 +13,23 @@ class DocumentProcessor:
     Handles processing of documents: text extraction, chunking, and embedding generation.
     """
     def __init__(self):
-        try:
-            # Initialize the sentence-transformer model for embeddings
-            self.embedding_model = SentenceTransformer(config.EMBEDDING_MODEL)
-            logger.info(f"Embedding model '{config.EMBEDDING_MODEL}' loaded successfully.")
-        except Exception as e:
-            logger.error(f"Failed to load embedding model: {e}")
-            raise
+        self.embedding_model = None
+        logger.info("DocumentProcessor initialized (model will load on first use).")
+        
+    def _get_embedding_model(self):
+        """Lazy load the embedding model"""
+        if self.embedding_model is None:
+            try:
+                logger.info(f"Loading embedding model '{config.EMBEDDING_MODEL}'...")
+                # Use local_files_only to avoid downloading during runtime
+                self.embedding_model = SentenceTransformer(config.EMBEDDING_MODEL, local_files_only=True)
+                logger.info(f"Embedding model '{config.EMBEDDING_MODEL}' loaded successfully.")
+            except Exception as e:
+                logger.error(f"Failed to load embedding model: {e}")
+                # Fallback to online mode if local files not found
+                logger.info("Trying online mode...")
+                self.embedding_model = SentenceTransformer(config.EMBEDDING_MODEL)
+        return self.embedding_model
 
     def process_pdf(self, file_stream) -> List[Dict[str, Any]]:
         """
@@ -80,7 +90,7 @@ class DocumentProcessor:
     def _generate_embeddings(self, texts: List[str]) -> List[List[float]]:
         """Generates vector embeddings for a list of text chunks."""
         logger.info(f"Generating embeddings for {len(texts)} chunks.")
-        embeddings = self.embedding_model.encode(texts, show_progress_bar=False)
+        embeddings = self._get_embedding_model().encode(texts, show_progress_bar=False)
         logger.info("Embeddings generated successfully.")
         return embeddings
 

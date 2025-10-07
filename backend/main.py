@@ -35,7 +35,7 @@ app.add_middleware(
 
 @app.get("/", include_in_schema=False)
 def root():
-    return {"message": "Welcome to the AI Portfolio Assistant API!"}
+    return {"status": "ok", "message": "AI Portfolio Assistant API is running"}
 
 @app.get(
     "/health",
