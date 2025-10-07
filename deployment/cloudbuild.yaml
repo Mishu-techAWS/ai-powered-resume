@@ -32,10 +32,7 @@ steps:
       - '--max-instances=2' # Adjust as needed
       - '--cpu=1'
       - '--memory=1Gi' # sentence-transformers can be memory intensive
-      - '--timeout=600s'
-      - '--startup-probe-timeout=600'
-      - '--startup-probe-period=10'
-      - '--startup-probe-failure-threshold=30' # Increase timeout for model loading and processing
+      - '--timeout=600s' # Increase timeout for model loading and processing
     id: 'Deploy'
 
 # Define substitutions for dynamic values
