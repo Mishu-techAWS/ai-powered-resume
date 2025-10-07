@@ -27,7 +27,7 @@ steps:
       - '--platform=managed'
       - '--allow-unauthenticated' # Use IAM for security in production
       - '--service-account=${_SERVICE_ACCOUNT_EMAIL}'
-      - '--set-env-vars-from-file=backend/.env'
+      - '--env-vars-file=backend/.env'
       - '--min-instances=0' # Scale to zero for cost savings
       - '--max-instances=2' # Adjust as needed
       - '--cpu=1'
