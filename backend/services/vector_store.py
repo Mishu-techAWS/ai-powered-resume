@@ -14,14 +14,22 @@ class VectorStore:
     Manages vector storage and retrieval using Google Firestore.
     """
     def __init__(self):
-        try:
-            # Initialize Firestore client
-            self.db = firestore.Client(project=config.GCP_PROJECT_ID)
-            self.collection = self.db.collection(config.FIRESTORE_COLLECTION)
-            logger.info("Firestore client initialized successfully.")
-        except Exception as e:
-            logger.error(f"Failed to initialize Firestore client: {e}")
-            raise
+        self.db = None
+        self.collection = None
+        logger.info("VectorStore initialized (Firestore will connect on first use).")
+        
+    def _get_firestore_client(self):
+        """Lazy initialize Firestore client"""
+        if self.db is None:
+            try:
+                logger.info("Connecting to Firestore...")
+                self.db = firestore.Client(project=config.GCP_PROJECT_ID)
+                self.collection = self.db.collection(config.FIRESTORE_COLLECTION)
+                logger.info("Firestore client initialized successfully.")
+            except Exception as e:
+                logger.error(f"Failed to initialize Firestore client: {e}")
+                raise
+        return self.db, self.collection
 
     def add_documents(self, documents: List[Dict[str, Any]], document_id: str):
         """
@@ -33,9 +41,10 @@ class VectorStore:
             document_id: The unique identifier for the source document.
         """
         logger.info(f"Adding {len(documents)} chunks for document '{document_id}' to Firestore.")
-        batch = self.db.batch()
+        db, collection = self._get_firestore_client()
+        batch = db.batch()
         for i, doc in enumerate(documents):
-            doc_ref = self.collection.document(f"{document_id}_{i}")
+            doc_ref = collection.document(f"{document_id}_{i}")
             doc_data = {
                 "document_id": document_id,
                 "chunk_index": i,
@@ -69,7 +78,8 @@ class VectorStore:
             query_vector = np.array(query_embedding)
 
             # Retrieve all document chunks from Firestore
-            all_docs = self.collection.stream()
+            db, collection = self._get_firestore_client()
+            all_docs = collection.stream()
 
             similarities = []
             for doc in all_docs:
@@ -107,8 +117,9 @@ class VectorStore:
     def delete_document(self, document_id: str):
         """Deletes all chunks associated with a document_id."""
         logger.info(f"Deleting all chunks for document_id: {document_id}")
-        docs = self.collection.where("document_id", "==", document_id).stream()
-        batch = self.db.batch()
+        db, collection = self._get_firestore_client()
+        docs = collection.where("document_id", "==", document_id).stream()
+        batch = db.batch()
         count = 0
         for doc in docs:
             batch.delete(doc.reference)
