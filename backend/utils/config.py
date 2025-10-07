@@ -35,6 +35,6 @@ class Config:
 config = Config()
 
 # Basic validation
-if not all([config.GCP_PROJECT_ID, config.GCS_BUCKET_NAME, config.API_KEY]):
-    raise ValueError("Missing required environment variables: GCP_PROJECT_ID, GCS_BUCKET_NAME, API_KEY")
+if not all([config.GCP_PROJECT_ID, config.GCS_BUCKET_NAME]):
+    raise ValueError("Missing required environment variables: GCP_PROJECT_ID, GCS_BUCKET_NAME")
 

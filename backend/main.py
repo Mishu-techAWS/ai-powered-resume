@@ -1,7 +1,7 @@
 import logging
-from fastapi import FastAPI, HTTPException, Depends, Security, UploadFile, File
+import logging
+from fastapi import FastAPI, HTTPException, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.security.api_key import APIKeyHeader
 
 from backend.models.schemas import ChatRequest, ChatResponse, HealthCheckResponse, ErrorResponse
 from backend.services.vector_store import vector_store
@@ -31,15 +31,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# --- API Key Security ---
-api_key_header = APIKeyHeader(name="X-API-Key", auto_error=True)
-
-async def get_api_key(api_key: str = Security(api_key_header)):
-    """Dependency to validate the API key."""
-    if api_key != config.API_KEY:
-        raise HTTPException(status_code=403, detail="Could not validate credentials")
-    return api_key
-
 # --- API Endpoints ---
 
 @app.get("/", include_in_schema=False)
@@ -62,7 +53,6 @@ def health_check():
     response_model=ChatResponse,
     tags=["AI Chat"],
     summary="Chat with the AI Assistant",
-    dependencies=[Depends(get_api_key)],
     responses={404: {"model": ErrorResponse, "description": "No relevant information found."}}
 )
 def chat_with_agent(request: ChatRequest):
@@ -87,7 +77,6 @@ def chat_with_agent(request: ChatRequest):
     "/upload-document",
     tags=["Document Management"],
     summary="Upload a PDF document for processing",
-    dependencies=[Depends(get_api_key)],
     status_code=201
 )
 async def upload_document(file: UploadFile = File(..., description="The PDF file to be processed.")):
