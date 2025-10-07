@@ -6,9 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatContainer = document.querySelector('.chat-container');
 
     // --- CONFIGURATION ---
-    // Replace with your deployed Cloud Run API URL and API Key
+    // Replace with your deployed Cloud Run API URL
     const API_URL = 'YOUR_CLOUD_RUN_API_URL_HERE'; // e.g., https://your-service-name-random-hash-uc.a.run.app
-    const API_KEY = 'YOUR_API_KEY_HERE';
 
     // Function to add a message to the chat box
     const addMessage = (text, sender) => {
@@ -50,8 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch(`${API_URL}/chat`, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
-                    'X-API-Key': API_KEY
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({ query: query })
             });

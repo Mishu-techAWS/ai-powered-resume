@@ -1,4 +1,4 @@
-name: Deploy to Google Cloud Run
+name: Deploy Backend and Frontend
 
 on:
   push:
@@ -10,7 +10,28 @@ env:
   SERVICE_NAME: portfolio-ai-backend
 
 jobs:
-  setup-and-deploy:
+  check-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      backend-changed: ${{ steps.changes.outputs.backend }}
+      frontend-changed: ${{ steps.changes.outputs.frontend }}
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 2
+    - uses: dorny/paths-filter@v2
+      id: changes
+      with:
+        filters: |
+          backend:
+            - 'backend/**'
+            - 'deployment/**'
+          frontend:
+            - 'frontend/**'
+
+  deploy-backend:
+    needs: check-changes
+    if: needs.check-changes.outputs.backend-changed == 'true'
     runs-on: ubuntu-latest
     
     steps:
@@ -20,7 +41,7 @@ jobs:
     - name: Authenticate to Google Cloud
       uses: google-github-actions/auth@v2
       with:
-        credentials_json: ${{ secrets.GCP_SA_KEY }}
+        credentials_json: '${{ secrets.GCP_SA_KEY }}'
 
     - name: Set up Cloud SDK
       uses: google-github-actions/setup-gcloud@v2
@@ -30,19 +51,10 @@ jobs:
 
     - name: Setup GCP resources
       run: |
-        # Enable APIs
         gcloud services enable run.googleapis.com cloudbuild.googleapis.com storage.googleapis.com firestore.googleapis.com aiplatform.googleapis.com artifactregistry.googleapis.com
-        
-        # Create GCS bucket
         gsutil mb -p ${{ env.GCP_PROJECT_ID }} -l ${{ env.GCP_REGION }} gs://${{ env.GCP_PROJECT_ID }}-portfolio-docs || true
-        
-        # Create Firestore database
         gcloud firestore databases create --location=${{ env.GCP_REGION }} --type=firestore-native || true
-        
-        # Create service account for app
         gcloud iam service-accounts create portfolio-ai-sa --display-name="Portfolio AI Service Account" || true
-        
-        # Grant roles to app service account
         gcloud projects add-iam-policy-binding ${{ env.GCP_PROJECT_ID }} --member="serviceAccount:portfolio-ai-sa@${{ env.GCP_PROJECT_ID }}.iam.gserviceaccount.com" --role="roles/run.invoker" || true
         gcloud projects add-iam-policy-binding ${{ env.GCP_PROJECT_ID }} --member="serviceAccount:portfolio-ai-sa@${{ env.GCP_PROJECT_ID }}.iam.gserviceaccount.com" --role="roles/datastore.user" || true
         gcloud projects add-iam-policy-binding ${{ env.GCP_PROJECT_ID }} --member="serviceAccount:portfolio-ai-sa@${{ env.GCP_PROJECT_ID }}.iam.gserviceaccount.com" --role="roles/storage.objectAdmin" || true
@@ -58,5 +70,23 @@ jobs:
         EOF
 
     - name: Deploy using Cloud Build
+      run: gcloud builds submit --config=deployment/cloudbuild.yaml .
+
+  deploy-frontend:
+    needs: [check-changes, deploy-backend]
+    if: always() && (needs.check-changes.outputs.frontend-changed == 'true' || needs.deploy-backend.result == 'success')
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Update API URL in frontend
       run: |
-        gcloud builds submit --config=deployment/cloudbuild.yaml .
+        sed -i "s|const API_URL = '.*';|const API_URL = '${{ secrets.API_URL }}';|g" frontend/script.js
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./frontend

@@ -1,12 +1,8 @@
 # GitHub Actions Setup Instructions
 
-## Automated Setup
-
-The GitHub Actions workflow now automatically creates all GCP resources including buckets, Firestore database, service accounts, and API keys.
-
 ## Required GitHub Secrets
 
-You only need to create a GitHub Actions service account and add these 2 secrets:
+Add these 3 secrets to your GitHub repository (Settings → Secrets and variables → Actions):
 
 ### 1. Create Service Account in GCP Console
 
@@ -17,34 +13,26 @@ You only need to create a GitHub Actions service account and add these 2 secrets
    - Storage Admin  
    - Artifact Registry Administrator
    - Service Account User
-   - Project IAM Admin (to create other service accounts)
-   - Service Usage Admin (to enable APIs)
+   - Project IAM Admin
+   - Service Usage Admin
    - Firestore Service Agent
 
-### 2. Generate Service Account Key
-
-1. Click on the created service account
-2. Go to Keys tab → Add Key → Create new key (JSON)
-3. Download the JSON key file
-
-### 3. Add GitHub Repository Secrets
-
-Go to your GitHub repository → Settings → Secrets and variables → Actions
-
-Add these 2 secrets:
+### 2. Add Required Secrets
 
 - `GCP_PROJECT_ID`: Your GCP project ID
 - `GCP_SA_KEY`: Contents of the JSON key file (entire JSON as text)
+- `API_URL`: https://portfolio-ai-backend-897296490174.us-central1.run.app
 
-### 4. What Gets Created Automatically
+### 3. Enable GitHub Pages
 
-The workflow will automatically:
-- Enable all required GCP APIs
-- Create Cloud Storage bucket: `{PROJECT_ID}-portfolio-docs`
-- Create Firestore database in native mode
-- Create application service account: `portfolio-ai-sa`
-- Grant necessary IAM roles
-- Generate .env file with all configurations
-- Deploy the application to Cloud Run
+1. Go to repository Settings → Pages
+2. Source: GitHub Actions
+3. The workflow will automatically deploy frontend to GitHub Pages
 
-The deployment triggers automatically on pushes to the main branch.
+### 4. Smart Deployment Features
+
+- **Change Detection**: Only rebuilds backend/frontend when files change
+- **Conditional Deployment**: Frontend deploys after successful backend deployment
+- **Automatic API URL**: Updates frontend with your API URL from secrets
+
+The workflow automatically handles all GCP resource creation and deploys both backend and frontend.
