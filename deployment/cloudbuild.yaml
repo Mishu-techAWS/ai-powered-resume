@@ -39,7 +39,7 @@ steps:
 substitutions:
   _GCP_REGION: 'us-central1'
   _SERVICE_NAME: 'portfolio-ai-backend'
-  _SERVICE_ACCOUNT_EMAIL: 'portfolio-ai-sa@${PROJECT_ID}.iam.gserviceaccount.com'
+  _SERVICE_ACCOUNT_EMAIL: 'airesume@steady-burner-472609-c0.iam.gserviceaccount.com'
 
 # Store the built image in Artifact Registry
 images:
