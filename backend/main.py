@@ -3,11 +3,11 @@ import logging
 from fastapi import FastAPI, HTTPException, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.models.schemas import ChatRequest, ChatResponse, HealthCheckResponse, ErrorResponse
-from backend.services.vector_store import vector_store
-from backend.services.llm_service import llm_service
-from backend.services.document_processor import document_processor
-from backend.utils.config import config
+from models.schemas import ChatRequest, ChatResponse, HealthCheckResponse, ErrorResponse
+from services.vector_store import vector_store
+from services.llm_service import llm_service
+from services.document_processor import document_processor
+from utils.config import config
 from google.cloud import storage
 
 # Configure logging

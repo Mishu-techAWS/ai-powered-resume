@@ -2,8 +2,8 @@ import logging
 import numpy as np
 from typing import List, Dict, Any
 from google.cloud import firestore
-from backend.utils.config import config
-from backend.services.document_processor import document_processor
+from utils.config import config
+from services.document_processor import document_processor
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)

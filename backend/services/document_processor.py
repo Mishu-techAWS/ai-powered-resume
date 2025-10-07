@@ -2,7 +2,7 @@ import logging
 from typing import List, Dict, Any
 from pypdf import PdfReader
 from sentence_transformers import SentenceTransformer
-from backend.utils.config import config
+from utils.config import config
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
