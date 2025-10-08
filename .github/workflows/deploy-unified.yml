@@ -3,11 +3,21 @@ name: Deploy Backend and Frontend
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
 
 env:
   GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
   GCP_REGION: us-central1
   SERVICE_NAME: portfolio-ai-backend
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   check-changes:
@@ -26,6 +36,7 @@ jobs:
           backend:
             - 'backend/**'
             - 'deployment/**'
+            - 'utils/**'
           frontend:
             - 'frontend/**'
 
@@ -73,20 +84,28 @@ jobs:
       run: gcloud builds submit --config=deployment/cloudbuild.yaml .
 
   deploy-frontend:
-    needs: [check-changes, deploy-backend]
-    if: always() && (needs.check-changes.outputs.frontend-changed == 'true' || needs.deploy-backend.result == 'success')
+    needs: check-changes
+    if: needs.check-changes.outputs.frontend-changed == 'true'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-
-    - name: Update API URL in frontend
-      run: |
-        sed -i "s|const API_URL = '.*';|const API_URL = '${{ secrets.API_URL }}';|g" frontend/script.js
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./frontend
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Inject API URL
+        run: |
+          sed -i "s|PLACEHOLDER_API_URL|${{ secrets.API_URL }}|g" frontend/inject-config.js
+        
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './frontend'
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
