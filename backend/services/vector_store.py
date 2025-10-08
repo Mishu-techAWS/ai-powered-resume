@@ -74,7 +74,7 @@ class VectorStore:
         logger.info(f"Finding {top_k} similar chunks for query: '{query}'")
         try:
             # Generate embedding for the user's query
-            query_embedding = document_processor.embedding_model.encode([query])[0]
+            query_embedding = document_processor._get_embedding_model().encode([query])[0]
             query_vector = np.array(query_embedding)
 
             # Retrieve all document chunks from Firestore
