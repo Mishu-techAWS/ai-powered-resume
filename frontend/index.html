@@ -3,39 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Doe - AI Portfolio</title>
+    <title>Mishal Yadav - DevOps Engineer Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>John Doe</h1>
-            <p>Software Engineer | AI Enthusiast | Cloud Architect</p>
+        <header class="hero-section">
+            <div class="profile-container">
+                <img src="/users/downloads/mishal_picture.png" alt="Mishal Yadav" class="profile-image">
+                <div class="hero-content">
+                    <h1>Mishal Yadav 🚀</h1>
+                    <p class="tagline">Production-Ready DevOps Engineer | Cloud Architect | AWS Expert</p>
+                    <div class="location-badge">
+                        🇦🇪 Open to Dubai Opportunities with Visa Sponsorship
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mishal-yadav-devops/" target="_blank" class="social-btn linkedin">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/Mishu-techAWS" target="_blank" class="social-btn github">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="social-btn resume" id="resume-btn">
+                            <i class="fas fa-file-pdf"></i> Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
         </header>
 
         <main>
-            <section id="about">
-                <h2>About Me</h2>
-                <p>Welcome to my portfolio! I specialize in building scalable cloud applications and exploring the frontiers of artificial intelligence. Feel free to ask my AI assistant anything about my skills, projects, or experience. It has been trained on my personal documents.</p>
+            <section id="about" class="section">
+                <div class="section-header">
+                    <h2>🎯 About Me</h2>
+                </div>
+                <div class="about-content">
+                    <p class="intro">
+                        Production-Ready DevOps Engineer with <strong>7+ years</strong> building secure, scalable cloud infrastructure for enterprise applications across AWS, Kubernetes, and automation frameworks.
+                    </p>
+                    <p>
+                        I design systems that are <em>secure by design</em>, <em>built to scale</em>, and <em>automated everywhere</em> — combining deep technical expertise with security-first practices to meet both performance and compliance requirements.
+                    </p>
+                    <p class="highlight">
+                        💬 <strong>Ask my AI assistant anything about my skills, projects, or experience!</strong> It has been trained on my personal documents and can provide detailed insights about my work.
+                    </p>
+                </div>
+            </section>
+
+            <section id="achievements" class="section">
+                <div class="section-header">
+                    <h2>🚀 Key Achievements</h2>
+                </div>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">☁️</div>
+                        <h3>Cloud & Infrastructure</h3>
+                        <p>Architected highly available Amazon EKS clusters with <strong>99.9% uptime SLAs</strong></p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">⚡</div>
+                        <h3>Automation & IaC</h3>
+                        <p>Built reusable Terraform & CloudFormation modules, reducing provisioning time by <strong>75%</strong></p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">🔄</div>
+                        <h3>CI/CD Pipelines</h3>
+                        <p>Designed secure GitLab CI/CD and GitHub Actions workflows with integrated security scanning</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">🔒</div>
+                        <h3>Security & Compliance</h3>
+                        <p>Implemented IAM least-privilege policies aligned with <strong>SOC 2</strong> and <strong>CIS benchmarks</strong></p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">💰</div>
+                        <h3>Cost Optimization</h3>
+                        <p>Automated deployments and infrastructure management, cutting engineering overhead by <strong>75%</strong></p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">📊</div>
+                        <h3>Monitoring & Reliability</h3>
+                        <p>Deployed Prometheus, CloudWatch, and ELK Stack for proactive incident management</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="section">
+                <div class="section-header">
+                    <h2>🔧 Technical Expertise</h2>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>☁️ Cloud & Containers</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag aws">AWS</span>
+                            <span class="skill-tag">EC2</span>
+                            <span class="skill-tag">EKS</span>
+                            <span class="skill-tag">S3</span>
+                            <span class="skill-tag">RDS</span>
+                            <span class="skill-tag">Lambda</span>
+                            <span class="skill-tag k8s">Kubernetes</span>
+                            <span class="skill-tag">Docker</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>🏗️ Infrastructure as Code</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag terraform">Terraform</span>
+                            <span class="skill-tag">CloudFormation</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>🔄 CI/CD & Automation</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag gitlab">GitLab CI/CD</span>
+                            <span class="skill-tag github">GitHub Actions</span>
+                            <span class="skill-tag">Jenkins</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>🔒 Security</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag security">IAM</span>
+                            <span class="skill-tag">VPC Design</span>
+                            <span class="skill-tag">CIS Compliance</span>
+                            <span class="skill-tag">Security Scanning</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>📊 Observability</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag prometheus">Prometheus</span>
+                            <span class="skill-tag">CloudWatch</span>
+                            <span class="skill-tag elk">ELK Stack</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>💻 Scripting</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag python">Python</span>
+                            <span class="skill-tag">Bash</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cta" class="section cta-section">
+                <div class="cta-content">
+                    <h2>🌍 Ready to Scale Your Infrastructure?</h2>
+                    <p>Let's connect if you're hiring DevOps talent or scaling cloud infrastructure! 🤝</p>
+                    <div class="cta-buttons">
+                        <a href="https://www.linkedin.com/in/mishal-yadav-devops/" target="_blank" class="cta-btn primary">
+                            <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                        </a>
+                        <button class="cta-btn secondary" onclick="document.querySelector('.chat-container').classList.remove('closed')">
+                            <i class="fas fa-robot"></i> Chat with AI Assistant
+                        </button>
+                    </div>
+                </div>
             </section>
         </main>
 
-        <div class="chat-container">
+        <div class="chat-container closed">
             <div class="chat-header">
-                <h3>Chat with my AI Assistant</h3>
+                <div class="chat-title">
+                    <i class="fas fa-robot"></i>
+                    <h3>AI Assistant</h3>
+                </div>
                 <button id="toggle-chat-btn" aria-label="Toggle Chat">
                     <i class="fas fa-chevron-up"></i>
                 </button>
             </div>
             <div class="chat-box" id="chat-box">
-                <!-- Messages will be appended here -->
                 <div class="message bot">
-                    <p>Hello! How can I help you learn more about John Doe today?</p>
+                    <p>👋 Hello! I'm Mishal's AI assistant. Ask me anything about his DevOps experience, projects, or technical skills!</p>
                 </div>
             </div>
             <div class="chat-input-area">
-                <input type="text" id="user-input" placeholder="Ask about my projects, skills...">
+                <input type="text" id="user-input" placeholder="Ask about AWS expertise, Kubernetes projects, automation...">
                 <button id="send-btn" aria-label="Send Message">
                     <i class="fas fa-paper-plane"></i>
                 </button>

@@ -77,6 +77,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Resume download handler
+    const resumeBtn = document.getElementById('resume-btn');
+    if (resumeBtn) {
+        resumeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            // You can update this path to your actual resume file
+            const resumePath = '/users/downloads/mishal_resume.pdf';
+            const link = document.createElement('a');
+            link.href = resumePath;
+            link.download = 'Mishal_Yadav_DevOps_Resume.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    }
+
     toggleChatBtn.addEventListener('click', () => {
         chatContainer.classList.toggle('closed');
     });
