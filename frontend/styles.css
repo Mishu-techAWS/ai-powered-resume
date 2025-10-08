@@ -12,12 +12,17 @@
     --terraform-purple: #7b42bc;
     --github-dark: #24292e;
     --linkedin-blue: #0077b5;
+    --whatsapp-green: #25d366;
+    --devyoddha-color: #ff6b35;
+    --maverick-primary: #00d4ff;
+    --maverick-secondary: #ff0080;
     
     --bg-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --bg-secondary: #f8fafc;
     --bg-card: #ffffff;
     --bg-dark: #1e293b;
     --bg-darker: #0f172a;
+    --bg-ai-pattern: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="ai-grid" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(0,212,255,0.1)"/><path d="M5,5 L15,15 M15,5 L5,15" stroke="rgba(255,0,128,0.05)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23ai-grid)"/></svg>');
     
     --text-primary: #1e293b;
     --text-secondary: #64748b;
@@ -30,6 +35,7 @@
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
     --shadow-glow: 0 0 30px rgba(99, 102, 241, 0.3);
+    --shadow-maverick: 0 0 20px rgba(0, 212, 255, 0.4);
     
     --border-radius: 16px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -44,9 +50,26 @@
 body {
     font-family: 'Inter', sans-serif;
     background: var(--bg-secondary);
+    background-image: var(--bg-ai-pattern);
     color: var(--text-primary);
     line-height: 1.7;
     overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 0, 128, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(99, 102, 241, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
 }
 
 .container {
@@ -58,6 +81,9 @@ body {
 /* Hero Section */
 .hero-section {
     background: var(--bg-primary);
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(0, 212, 255, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(255, 0, 128, 0.2) 0%, transparent 50%);
     padding: 100px 0 120px;
     position: relative;
     overflow: hidden;
@@ -71,8 +97,14 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="hero-grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/><circle cx="10" cy="10" r="0.5" fill="rgba(0,212,255,0.3)"/></pattern></defs><rect width="100" height="100" fill="url(%23hero-grid)"/></svg>');
     opacity: 0.4;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
 }
 
 .profile-container {
@@ -166,6 +198,17 @@ body {
 .social-btn.resume:hover { 
     background: var(--error-color); 
     border-color: var(--error-color);
+}
+.social-btn.devyoddha:hover { 
+    background: var(--whatsapp-green); 
+    border-color: var(--whatsapp-green);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
 /* Sections */
@@ -396,6 +439,18 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.4);
 }
 
+.cta-btn.devyoddha {
+    background: var(--whatsapp-green);
+    color: var(--text-light);
+    border: 2px solid var(--whatsapp-green);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 10px var(--whatsapp-green); }
+    to { box-shadow: 0 0 20px var(--whatsapp-green), 0 0 30px var(--whatsapp-green); }
+}
+
 .cta-btn:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-xl);
@@ -410,25 +465,49 @@ body {
     max-height: 650px;
     background: var(--bg-card);
     border-radius: var(--border-radius);
-    box-shadow: var(--shadow-xl);
-    border: 2px solid var(--border-color);
+    box-shadow: var(--shadow-xl), var(--shadow-maverick);
+    border: 2px solid var(--maverick-primary);
     transition: var(--transition);
     z-index: 1000;
+    animation: chatFloat 4s ease-in-out infinite;
+}
+
+@keyframes chatFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
 }
 
 .chat-container.closed {
-    max-height: 70px;
+    max-height: 80px;
     overflow: hidden;
 }
 
 .chat-header {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, var(--maverick-primary), var(--maverick-secondary));
     padding: 20px 24px;
     border-radius: var(--border-radius) var(--border-radius) 0 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.chat-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
 }
 
 .chat-title {
@@ -437,16 +516,28 @@ body {
     gap: 12px;
 }
 
+.maverick-avatar {
+    font-size: 1.8rem;
+    animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
 .chat-title h3 {
     color: var(--text-light);
     font-size: 1.2rem;
     margin: 0;
     font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-.chat-title i {
-    color: var(--text-light);
-    font-size: 1.3rem;
+.chat-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.85rem;
+    font-weight: 400;
 }
 
 #toggle-chat-btn {
@@ -462,6 +553,7 @@ body {
 
 #toggle-chat-btn:hover {
     background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
 }
 
 .chat-container.closed #toggle-chat-btn i {
@@ -487,6 +579,24 @@ body {
 
 .message.bot {
     align-items: flex-start;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.bot-avatar {
+    font-size: 1.5rem;
+    animation: bounce 2s infinite;
+    flex-shrink: 0;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-5px); }
+    60% { transform: translateY(-3px); }
+}
+
+.message-content {
+    flex: 1;
 }
 
 .message p {
@@ -500,13 +610,28 @@ body {
 }
 
 .message.user p {
-    background: var(--primary-color);
+    background: linear-gradient(135deg, var(--maverick-primary), var(--maverick-secondary));
     color: var(--text-light);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
 }
 
-.message.bot p {
+.message.bot .message-content p {
     background: var(--bg-secondary);
-    border: 2px solid var(--border-color);
+    border: 2px solid var(--maverick-primary);
+    border-radius: 20px 20px 20px 5px;
+    position: relative;
+}
+
+.message.bot .message-content p::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    bottom: 8px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 8px 8px 0;
+    border-color: transparent var(--maverick-primary) transparent transparent;
 }
 
 .chat-input-area {

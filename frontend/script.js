@@ -16,6 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (sender === 'loading') {
             messageElement.innerHTML = '<div class="dot-flashing"></div>';
+        } else if (sender === 'bot') {
+            messageElement.innerHTML = `
+                <div class="bot-avatar">🤖</div>
+                <div class="message-content">
+                    <p>${text}</p>
+                </div>
+            `;
         } else {
             const p = document.createElement('p');
             p.textContent = text;

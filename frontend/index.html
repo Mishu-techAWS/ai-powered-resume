@@ -23,6 +23,9 @@
                         <a href="https://github.com/Mishu-techAWS" target="_blank" class="social-btn github">
                             <i class="fab fa-github"></i> GitHub
                         </a>
+                        <a href="https://chat.whatsapp.com/CPpngC2FNhg5LG4DbeeLS1" target="_blank" class="social-btn devyoddha">
+                            <i class="fab fa-whatsapp"></i> DevYoddha Community
+                        </a>
                         <a href="#" class="social-btn resume" id="resume-btn">
                             <i class="fas fa-file-pdf"></i> Resume
                         </a>
@@ -155,8 +158,11 @@
                         <a href="https://www.linkedin.com/in/mishal-yadav-devops/" target="_blank" class="cta-btn primary">
                             <i class="fab fa-linkedin"></i> Connect on LinkedIn
                         </a>
+                        <a href="https://chat.whatsapp.com/CPpngC2FNhg5LG4DbeeLS1" target="_blank" class="cta-btn devyoddha">
+                            <i class="fab fa-whatsapp"></i> Join DevYoddha Community
+                        </a>
                         <button class="cta-btn secondary" onclick="document.querySelector('.chat-container').classList.remove('closed')">
-                            <i class="fas fa-robot"></i> Chat with AI Assistant
+                            <i class="fas fa-robot"></i> Chat with Maverick AI
                         </button>
                     </div>
                 </div>
@@ -166,8 +172,11 @@
         <div class="chat-container closed">
             <div class="chat-header">
                 <div class="chat-title">
-                    <i class="fas fa-robot"></i>
-                    <h3>AI Assistant</h3>
+                    <div class="maverick-avatar">🤖</div>
+                    <div>
+                        <h3>Maverick AI</h3>
+                        <span class="chat-subtitle">DevOps Assistant</span>
+                    </div>
                 </div>
                 <button id="toggle-chat-btn" aria-label="Toggle Chat">
                     <i class="fas fa-chevron-up"></i>
@@ -175,11 +184,14 @@
             </div>
             <div class="chat-box" id="chat-box">
                 <div class="message bot">
-                    <p>👋 Hello! I'm Mishal's AI assistant. Ask me anything about his DevOps experience, projects, or technical skills!</p>
+                    <div class="bot-avatar">🤖</div>
+                    <div class="message-content">
+                        <p>👋 Hey there! I'm <strong>Maverick</strong>, Mishal's AI DevOps assistant. Ask me anything about his AWS expertise, Kubernetes projects, automation skills, or career journey!</p>
+                    </div>
                 </div>
             </div>
             <div class="chat-input-area">
-                <input type="text" id="user-input" placeholder="Ask about AWS expertise, Kubernetes projects, automation...">
+                <input type="text" id="user-input" placeholder="Ask Maverick about AWS, K8s, automation, career...">
                 <button id="send-btn" aria-label="Send Message">
                     <i class="fas fa-paper-plane"></i>
                 </button>
