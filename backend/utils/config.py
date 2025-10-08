@@ -19,7 +19,7 @@ class Config:
     FIRESTORE_COLLECTION = os.getenv("FIRESTORE_COLLECTION", "portfolio_documents")
 
     # Vertex AI / Gemini Settings
-    VERTEX_AI_MODEL_NAME = os.getenv("VERTEX_AI_MODEL_NAME", "gemini-1.0-pro")
+    VERTEX_AI_MODEL_NAME = os.getenv("VERTEX_AI_MODEL_NAME", "gemini-2.5-pro")
 
     # Embedding Model Settings
     EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "all-MiniLM-L6-v2")
