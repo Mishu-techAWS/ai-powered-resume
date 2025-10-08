@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatContainer = document.querySelector('.chat-container');
 
     // --- CONFIGURATION ---
-    // Replace with your deployed Cloud Run API URL
-    const API_URL = 'YOUR_CLOUD_RUN_API_URL_HERE'; // e.g., https://your-service-name-random-hash-uc.a.run.app
+    // API URL will be injected during GitHub Pages deployment via secrets
+    const API_URL = window.API_URL || 'YOUR_CLOUD_RUN_API_URL_HERE';
 
     // Function to add a message to the chat box
     const addMessage = (text, sender) => {
@@ -34,10 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!API_URL || API_URL === 'YOUR_CLOUD_RUN_API_URL_HERE') {
             addMessage("Error: API URL is not configured in script.js.", 'bot');
-            return;
-        }
-        if (!API_KEY || API_KEY === 'YOUR_API_KEY_HERE') {
-            addMessage("Error: API Key is not configured in script.js.", 'bot');
             return;
         }
 
