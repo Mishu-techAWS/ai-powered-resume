@@ -89,8 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (resumeBtn) {
         resumeBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            // You can update this path to your actual resume file
-            const resumePath = '/users/downloads/mishal_resume.pdf';
+            // Updated path to actual resume file
+            const resumePath = './resume.pdf';
             const link = document.createElement('a');
             link.href = resumePath;
             link.download = 'Mishal_Yadav_DevOps_Resume.pdf';

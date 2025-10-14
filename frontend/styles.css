@@ -132,7 +132,7 @@ body::before {
 }
 
 .hero-content h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 800;
     margin-bottom: 16px;
     color: var(--text-light);
@@ -140,10 +140,45 @@ body::before {
 }
 
 .tagline {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-bottom: 24px;
     color: rgba(255, 255, 255, 0.95);
     font-weight: 500;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 24px;
+    justify-content: center;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
 }
 
 .location-badge {
@@ -230,7 +265,7 @@ body::before {
 }
 
 .section-header h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 800;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
@@ -749,6 +784,18 @@ body::before {
     
     .hero-content h1 {
         font-size: 2.8rem;
+    }
+    
+    .hero-stats {
+        gap: 20px;
+    }
+    
+    .stat-number {
+        font-size: 1.6rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
     }
     
     .achievements-grid {
