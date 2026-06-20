@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Dark background with rounded corners -->
+  <rect width="64" height="64" rx="12" fill="#06080f"/>
+  <!-- Gradient border glow ring -->
+  <rect x="1.5" y="1.5" width="61" height="61" rx="11" fill="none" stroke="url(#grd)" stroke-width="2.5" opacity="0.8"/>
+  <!-- Cloud shape behind letters -->
+  <ellipse cx="32" cy="38" rx="18" ry="8" fill="#0d1117" opacity="0.6"/>
+  <!-- MY text - clean bold initials -->
+  <text
+    x="32" y="40"
+    font-family="Arial Black, Arial, sans-serif"
+    font-size="26"
+    font-weight="900"
+    fill="url(#txt)"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    letter-spacing="-1">MY</text>
+  <!-- Accent dot -->
+  <circle cx="48" cy="18" r="4" fill="#00d4ff" opacity="0.9"/>
+  <!-- Small AWS-like arc hint top-left -->
+  <path d="M10 20 Q14 15 18 20" stroke="#ff9900" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="grd" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="txt" x1="0" y1="30" x2="64" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#00d4ff"/>
+    </linearGradient>
+  </defs>
+</svg>
