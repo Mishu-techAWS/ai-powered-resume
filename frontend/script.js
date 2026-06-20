@@ -123,14 +123,15 @@ document.addEventListener('DOMContentLoaded', () => {
   ────────────────────────────────────────────────────── */
   const typedEl    = document.getElementById('typed-text');
   const phrases    = [
-    'Cloud Architecture',
-    'Kubernetes & EKS',
-    'CI/CD Automation',
-    'AWS Infrastructure',
-    'Terraform & IaC',
-    'DevSecOps',
-    'AI-Powered DevOps',
-    'SRE & Observability',
+    'Azure AKS & Platform Engineering',
+    'Multi-Cloud Architecture',
+    'Fintech & Banking DevOps',
+    'GitOps & CI/CD at Scale',
+    'Terraform & Bicep IaC',
+    'Agentic AI Automation',
+    'Kubernetes & SRE',
+    'DevSecOps Zero-CVE Pipelines',
+    'Azure DevOps & GitOps',
   ];
   let pi = 0, ci = 0, deleting = false;
   const TYPING_SPEED  = 80;

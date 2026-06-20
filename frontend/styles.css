@@ -1484,6 +1484,192 @@ a.hc-item:hover { color: var(--accent); }
 }
 
 /* ──────────────────────────────────────────────────────────
+   HERO ADDITIONS — Current Role Banner & Role Line
+────────────────────────────────────────────────────────── */
+.hero-role-line {
+  margin-bottom: 10px;
+}
+.role-static {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-2);
+  letter-spacing: 0.01em;
+}
+.current-role-banner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, rgba(0,120,212,0.12) 0%, rgba(0,212,255,0.08) 100%);
+  border: 1px solid rgba(0,120,212,0.35);
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-bottom: 22px;
+  position: relative;
+  overflow: hidden;
+}
+.current-role-banner::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #0078d4, var(--accent));
+  border-radius: 3px 0 0 3px;
+}
+.crb-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(0,120,212,0.18);
+  color: #0078d4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.crb-label {
+  font-size: 0.72rem;
+  color: var(--text-3);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.crb-company {
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: #4da8e8;
+  line-height: 1.3;
+}
+.crb-sub {
+  font-size: 0.77rem;
+  color: var(--text-3);
+  margin-top: 1px;
+}
+.crb-fintech-tag {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 99px;
+  background: rgba(245,158,11,0.12);
+  border: 1px solid rgba(245,158,11,0.3);
+  color: var(--amber);
+}
+
+/* Tech pill: Azure variants */
+.azure-pill { background: rgba(0,120,212,0.12); border-color: rgba(0,120,212,0.3); color: #4da8e8; }
+.bicep-pill { background: rgba(123,66,188,0.12); border-color: rgba(123,66,188,0.3); color: #a97fe4; }
+.argo-pill  { background: rgba(233,109,118,0.12); border-color: rgba(233,109,118,0.3); color: #e96d76; }
+
+/* Btn: DevYoddha icon */
+.devyoddha-icon:hover {
+  background: rgba(139,92,246,0.15);
+  border-color: #8b5cf6;
+  color: #a78bfa;
+}
+
+/* ── EXPERIENCE ADDITIONS ── */
+.tl-card-featured {
+  border-color: rgba(0,120,212,0.3);
+  background: linear-gradient(135deg, #0f1a26 0%, #0d1520 100%);
+}
+.tl-fintech-strip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--amber);
+  background: rgba(245,158,11,0.1);
+  border: 1px solid rgba(245,158,11,0.25);
+  border-radius: 99px;
+  padding: 4px 12px;
+  margin-bottom: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.adcb-color { background: rgba(0,120,212,0.14); color: #4da8e8; }
+
+/* ── PROJECT ADDITIONS ── */
+.proj-live-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.proj-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--green);
+  background: rgba(16,185,129,0.1);
+  border: 1px solid rgba(16,185,129,0.3);
+  padding: 3px 10px;
+  border-radius: 99px;
+}
+.live-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--green);
+  border-radius: 50%;
+  animation: ping 1.5s infinite;
+}
+.devyoddha-proj {
+  background: rgba(139,92,246,0.18);
+  color: #a78bfa;
+}
+.azure-proj {
+  background: rgba(0,120,212,0.15);
+  color: #4da8e8;
+}
+.proj-link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: rgba(0,212,255,0.3);
+}
+.proj-link:hover { color: #fff; }
+
+/* DevYoddha community buttons row */
+.comm-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.platform-btn {
+  background: rgba(139,92,246,0.18) !important;
+  color: #a78bfa !important;
+  border: 1px solid rgba(139,92,246,0.4) !important;
+}
+.platform-btn:hover {
+  background: rgba(139,92,246,0.3) !important;
+  box-shadow: 0 8px 30px rgba(139,92,246,0.25) !important;
+}
+
+/* Botim contact icon */
+.botim-icon { background: rgba(0,212,255,0.12); color: var(--accent); }
+
+/* DevYoddha contact link icon */
+.devyoddha-cl-icon { background: rgba(139,92,246,0.12); color: #a78bfa; }
+
+/* Education distinction highlight */
+.edu-distinction { color: var(--amber); }
+
+/* Azure skill color */
+.azure-color { background: rgba(0,120,212,0.12); color: #4da8e8; }
+
+/* Footer sub-line */
+.footer-sub {
+  font-size: 0.78rem;
+  color: var(--accent) !important;
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: 4px;
+  opacity: 0.8;
+}
+
+/* ──────────────────────────────────────────────────────────
    3D TILT EFFECT (set by JS)
 ────────────────────────────────────────────────────────── */
 [data-tilt] { transform-style: preserve-3d; }
