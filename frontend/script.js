@@ -280,4 +280,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
+  /* ──────────────────────────────────────────────────────
+     INTRO VIDEO — custom play overlay
+  ────────────────────────────────────────────────────── */
+  const introVideo = document.getElementById('intro-video');
+  const playBtn    = document.getElementById('video-play-btn');
+
+  if (introVideo && playBtn) {
+    playBtn.addEventListener('click', () => {
+      introVideo.play();
+    });
+    introVideo.addEventListener('play',  () => playBtn.classList.add('hidden'));
+    introVideo.addEventListener('pause', () => {
+      if (!introVideo.ended) playBtn.classList.remove('hidden');
+    });
+    introVideo.addEventListener('ended', () => {
+      introVideo.currentTime = 0;
+      playBtn.classList.remove('hidden');
+    });
+
+    // Pause when scrolled out of view so audio never plays off-screen
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(entries => {
+        entries.forEach(en => {
+          if (!en.isIntersecting && !introVideo.paused) introVideo.pause();
+        });
+      }, { threshold: 0.35 }).observe(introVideo);
+    }
+  }
+
 });

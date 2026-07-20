@@ -23,6 +23,7 @@
         <div class="nav-inner">
             <a href="#hero" class="nav-logo">MY<span class="accent">.</span></a>
             <ul class="nav-links" id="nav-links">
+                <li><a href="#intro" class="nav-link nav-link-video"><i class="fas fa-circle-play"></i> Intro</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
@@ -191,11 +192,67 @@
     </section>
 
     <!-- ═══════════════════════════════════════════
+         VIDEO INTRO
+    ═══════════════════════════════════════════ -->
+    <section id="intro" class="section section-alt">
+        <div class="section-wrap">
+            <div class="section-eyebrow">01 — Intro</div>
+            <h2 class="section-heading">Meet Me in 60 Seconds</h2>
+
+            <div class="intro-layout">
+                <div class="intro-text-col">
+                    <div class="intro-quote">
+                        <i class="fas fa-quote-left"></i>
+                        AI demos are easy. <span class="accent-text">Production isn't.</span>
+                    </div>
+                    <p class="intro-body">
+                        A quick introduction to who I am and how I think about shipping AI systems that survive
+                        real production traffic — not just weekend demos. If you'd rather watch than read, start here.
+                    </p>
+                    <ul class="intro-points">
+                        <li><i class="fas fa-circle-check"></i> Why production AI is an <strong>infrastructure</strong> problem</li>
+                        <li><i class="fas fa-circle-check"></i> Agentic AI &amp; RAG, deployed the <strong>DevOps way</strong></li>
+                        <li><i class="fas fa-circle-check"></i> 8+ years of reliability engineering behind it</li>
+                    </ul>
+                    <div class="intro-meta">
+                        <span><i class="fas fa-clock"></i> 58 seconds</span>
+                        <span><i class="fas fa-closed-captioning"></i> Captioned</span>
+                        <span><i class="fas fa-volume-high"></i> Sound on</span>
+                    </div>
+                </div>
+
+                <div class="intro-video-col">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <video
+                            id="intro-video"
+                            class="intro-video"
+                            poster="media/intro-poster.jpg"
+                            preload="metadata"
+                            playsinline
+                            controls
+                            controlsList="nodownload">
+                            <source src="media/intro.mp4" type="video/mp4">
+                            Your browser doesn't support embedded video —
+                            <a href="media/intro.mp4">download the intro instead</a>.
+                        </video>
+                        <button class="video-play-overlay" id="video-play-btn" aria-label="Play intro video">
+                            <span class="vpo-ring"></span>
+                            <span class="vpo-btn"><i class="fas fa-play"></i></span>
+                            <span class="vpo-label">Play Intro</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
          ABOUT
     ═══════════════════════════════════════════ -->
     <section id="about" class="section">
         <div class="section-wrap">
-            <div class="section-eyebrow">01 — About</div>
+            <div class="section-eyebrow">02 — About</div>
             <h2 class="section-heading">Who Am I?</h2>
 
             <div class="about-layout">
@@ -258,7 +315,7 @@
     ═══════════════════════════════════════════ -->
     <section id="experience" class="section section-alt">
         <div class="section-wrap">
-            <div class="section-eyebrow">02 — Experience</div>
+            <div class="section-eyebrow">03 — Experience</div>
             <h2 class="section-heading">Work History</h2>
 
             <div class="timeline">
@@ -394,7 +451,7 @@
     ═══════════════════════════════════════════ -->
     <section id="skills" class="section">
         <div class="section-wrap">
-            <div class="section-eyebrow">03 — Skills</div>
+            <div class="section-eyebrow">04 — Skills</div>
             <h2 class="section-heading">Technical Arsenal</h2>
 
             <div class="skills-grid">
@@ -528,7 +585,7 @@
     ═══════════════════════════════════════════ -->
     <section id="achievements" class="section section-alt">
         <div class="section-wrap">
-            <div class="section-eyebrow">04 — Impact</div>
+            <div class="section-eyebrow">05 — Impact</div>
             <h2 class="section-heading">Key Achievements</h2>
 
             <div class="ach-grid">
@@ -577,7 +634,7 @@
     ═══════════════════════════════════════════ -->
     <section id="projects" class="section">
         <div class="section-wrap">
-            <div class="section-eyebrow">05 — Projects</div>
+            <div class="section-eyebrow">06 — Projects</div>
             <h2 class="section-heading">Featured Projects</h2>
 
             <div class="projects-grid">
@@ -690,7 +747,7 @@
     ═══════════════════════════════════════════ -->
     <section id="certifications" class="section section-alt">
         <div class="section-wrap">
-            <div class="section-eyebrow">06 — Credentials</div>
+            <div class="section-eyebrow">07 — Credentials</div>
             <h2 class="section-heading">Certifications</h2>
 
             <div class="certs-grid">
@@ -778,7 +835,7 @@
     ═══════════════════════════════════════════ -->
     <section id="education" class="section">
         <div class="section-wrap">
-            <div class="section-eyebrow">07 — Education</div>
+            <div class="section-eyebrow">08 — Education</div>
             <h2 class="section-heading">Academic Background</h2>
 
             <div class="edu-card reveal">
@@ -807,7 +864,7 @@
     ═══════════════════════════════════════════ -->
     <section id="community" class="section section-alt">
         <div class="section-wrap">
-            <div class="section-eyebrow">08 — Community</div>
+            <div class="section-eyebrow">09 — Community</div>
             <h2 class="section-heading">DevYoddha Community</h2>
 
             <div class="comm-layout">
@@ -852,7 +909,7 @@
     ═══════════════════════════════════════════ -->
     <section id="contact" class="section">
         <div class="section-wrap">
-            <div class="section-eyebrow">09 — Contact</div>
+            <div class="section-eyebrow">10 — Contact</div>
             <h2 class="section-heading">Let's Connect</h2>
             <p class="contact-subtitle">Open to UAE-based senior DevOps / SRE, platform engineering, and <strong>Agentic AI / MLOps</strong> roles. Fintech, banking, enterprise cloud transformation &amp; AI infrastructure welcome. Let's build something intelligent together.</p>
 
