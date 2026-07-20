@@ -1173,6 +1173,59 @@ a.hc-item:hover { color: var(--accent); }
   color: var(--amber);
 }
 
+/* Official credential badge images (AWS / Microsoft) */
+.cert-badge-wrap.badge-img {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  padding: 5px;
+  width: 62px;
+  height: 62px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.cert-badge-wrap.badge-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Cert cards that link out to the official credential */
+a.cert-card {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+a.cert-card:hover .cert-name { color: var(--accent); }
+a.cert-card .cert-status-badge.verified { transition: var(--transition); }
+a.cert-card:hover .cert-status-badge.verified {
+  background: rgba(16,185,129,0.22);
+  border-color: rgba(16,185,129,0.55);
+}
+.cert-verify {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 6px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent);
+  font-family: 'JetBrains Mono', monospace;
+}
+.cert-featured-tag {
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 2px 8px;
+  border-radius: 99px;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: rgba(139,92,246,0.16);
+  border: 1px solid rgba(139,92,246,0.4);
+  color: #c4b5fd;
+}
+
 /* ──────────────────────────────────────────────────────────
    EDUCATION
 ────────────────────────────────────────────────────────── */
