@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mishal Yadav · DevOps / SRE &amp; Agentic AI Engineer | AWS · Azure · MLOps · RAG | Abu Dhabi UAE</title>
-    <meta name="description" content="Senior DevOps / SRE Engineer at ADCB with deep Agentic AI &amp; AIOps expertise. 8+ years AWS, Azure AKS, Kubernetes, Terraform, CI/CD — building Agentic AI automation, Python RAG pipelines, and MLOps deployment at scale. Abu Dhabi, UAE.">
-    <meta name="keywords" content="DevOps Engineer UAE, SRE, Agentic AI Engineer, AIOps, MLOps, RAG Pipelines, LLM Automation, Python Automation, AWS Bedrock, AWS Solutions Architect, Azure AKS, Kubernetes, Terraform, CI/CD, GitOps, Multi-Cloud, LLMOps, AI Infrastructure, Fintech DevOps, Abu Dhabi, Cloud Engineer, Generative AI, Vector Databases, AI Agents, Azure AI Apps and Agents Developer Associate, Microsoft Certified">
+    <title>Mishal Yadav · Full Stack AI Engineer | Production LLM Agents · Azure OpenAI · LangGraph · Python · PostgreSQL/pgvector | Abu Dhabi UAE</title>
+    <meta name="description" content="Full Stack AI Engineer in Abu Dhabi — 8+ years software &amp; platform engineering, 2+ years shipping LLM applications to production. Python 3.11+, React/TypeScript, agentic workflows (LangGraph / Semantic Kernel), Azure OpenAI, PostgreSQL + pgvector, pandas/openpyxl, SAP &amp; spreadsheet integration, and hard rigour on data validation, reconciliation and outlier detection. Production systems, not prototypes.">
+    <meta name="keywords" content="Full Stack AI Engineer UAE, AI Engineer Abu Dhabi, LLM Application Engineer, Agentic AI Engineer, LangGraph, Semantic Kernel, Azure OpenAI, Tool Calling, Structured Output, Prompt Versioning, Retrieval RAG, PostgreSQL, pgvector, SQL, Python 3.11, FastAPI, Pydantic, pandas, openpyxl, SAP Integration, HR Data, Finance Data, Data Validation, Reconciliation, Outlier Detection, React, TypeScript, Evaluation Harness, LLM Observability, Human in the Loop, Escalation, Audit Logging, MLOps, LLMOps, Kubernetes, Azure AI Apps and Agents Developer Associate, Microsoft Certified">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="shortcut icon" href="favicon.svg">
     <link rel="stylesheet" href="styles.css">
@@ -25,13 +25,15 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="#hero" class="nav-link nav-link-video"><i class="fas fa-circle-play"></i> Intro</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#ai-systems" class="nav-link">AI Systems</a></li>
+                <li><a href="#role-fit" class="nav-link nav-link-fit">Role Fit</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#certifications" class="nav-link">Certs</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <a href="./resume.pdf" download="Mishal_Yadav_DevOps_Resume.pdf" class="nav-resume">
+            <a href="./resume.pdf" download="Mishal_Yadav_AI_Engineer_Resume.pdf" class="nav-resume">
                 <i class="fas fa-download"></i> Resume
             </a>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -51,7 +53,7 @@
                 <div class="avail-badge">
                     <span class="pulse-ring"></span>
                     <span class="pulse-dot"></span>
-                    Open to Opportunities · Visa: Employer Transferable
+                    Open to Full Stack AI Engineer roles · Abu Dhabi · Visa: Employer Transferable
                 </div>
 
                 <h1 class="hero-name">
@@ -60,7 +62,7 @@
                 </h1>
 
                 <div class="hero-role-line">
-                    <span class="role-static">Senior DevOps / SRE &amp; Agentic AI Automation Engineer</span>
+                    <span class="role-static">Full Stack AI Engineer — Production LLM &amp; Agent Systems</span>
                 </div>
 
                 <div class="hero-typing">
@@ -70,12 +72,12 @@
 
                 <!-- Multi-cloud badge strip -->
                 <div class="multicloud-strip">
-                    <span class="mc-chip aws-chip"><i class="fab fa-aws"></i> AWS</span>
-                    <span class="mc-chip azure-chip"><i class="fab fa-microsoft"></i> Azure</span>
-                    <span class="mc-chip gcp-chip"><i class="fab fa-google"></i> GCP</span>
-                    <span class="mc-chip ai-chip"><i class="fas fa-brain"></i> Agentic AI</span>
-                    <span class="mc-chip ai-chip"><i class="fas fa-robot"></i> MLOps / RAG</span>
-                    <span class="mc-chip k8s-chip"><i class="fas fa-dharmachakra"></i> Kubernetes</span>
+                    <span class="mc-chip ai-chip"><i class="fas fa-robot"></i> Agentic Workflows</span>
+                    <span class="mc-chip azure-chip"><i class="fab fa-microsoft"></i> Azure OpenAI</span>
+                    <span class="mc-chip ai-chip"><i class="fab fa-python"></i> Python 3.11+</span>
+                    <span class="mc-chip pg-chip"><i class="fas fa-database"></i> PostgreSQL · pgvector</span>
+                    <span class="mc-chip ts-chip"><i class="fab fa-react"></i> React · TypeScript</span>
+                    <span class="mc-chip dq-chip"><i class="fas fa-scale-balanced"></i> Data Validation</span>
                 </div>
 
                 <div class="current-role-banner">
@@ -89,11 +91,13 @@
                 </div>
 
                 <p class="hero-bio">
-                    <strong>8+ years</strong> architecting, automating, and operating cloud-native infrastructure across
-                    <strong>AWS</strong> (EKS, Lambda, Bedrock), <strong>Azure</strong> (AKS, Bicep, DevOps)
-                    and <strong>GCP</strong> — sustaining <strong>99.9% uptime</strong> across multi-cluster Kubernetes in UAE's financial sector.
-                    Now fusing DevOps with AI: building <strong>Agentic AI automation</strong>, <strong>Python RAG pipelines</strong>,
-                    and <strong>MLOps deployment</strong> workflows that ship intelligent infrastructure to production.
+                    <strong>8+ years</strong> software and platform engineering — the last <strong>2+ shipping LLM applications
+                    into production</strong>, not demos. I build <strong>agentic systems</strong> end to end: Python 3.11+ services with
+                    <strong>tool calling</strong>, <strong>structured output</strong>, <strong>retrieval over pgvector</strong> and
+                    <strong>versioned prompts</strong>; React/TypeScript on the front; <strong>Azure OpenAI</strong> as an
+                    enterprise-hosted deployment behind private networking. Every answer an agent puts in front of a
+                    decision-maker is <strong>validated, reconciled against source-of-truth, and logged</strong> — because in
+                    HR and finance data, the validation layer matters more than the model.
                 </p>
 
                 <div class="hero-contact-row">
@@ -116,13 +120,13 @@
                 <div class="hero-tech-row">
                     <span class="tech-label">Core Stack:</span>
                     <div class="tech-pills">
-                        <span class="tech-pill aws-pill">AWS EKS / EC2</span>
-                        <span class="tech-pill azure-pill">Azure AKS</span>
-                        <span class="tech-pill bicep-pill">Terraform / Bicep</span>
-                        <span class="tech-pill k8s-pill">Kubernetes</span>
-                        <span class="tech-pill ai-tech-pill">Agentic AI / RAG</span>
-                        <span class="tech-pill ai-tech-pill">MLOps · Python</span>
-                        <span class="tech-pill gl-pill">CI/CD GitOps</span>
+                        <span class="tech-pill ai-tech-pill">Python 3.11+ · FastAPI · Pydantic</span>
+                        <span class="tech-pill ai-tech-pill">LangGraph / Semantic Kernel</span>
+                        <span class="tech-pill azure-pill">Azure OpenAI</span>
+                        <span class="tech-pill pg-pill">PostgreSQL · pgvector · SQL</span>
+                        <span class="tech-pill ts-pill">React · TypeScript</span>
+                        <span class="tech-pill pd-pill">pandas · openpyxl · SAP data</span>
+                        <span class="tech-pill k8s-pill">Docker · Kubernetes · CI/CD</span>
                     </div>
                 </div>
             </div>
@@ -187,16 +191,16 @@
                         <span class="stat-lbl">Years Exp.</span>
                     </div>
                     <div class="stat-box">
-                        <span class="stat-val counter" data-target="10">0</span><span class="stat-suffix">+</span>
-                        <span class="stat-lbl">Prod Clusters</span>
+                        <span class="stat-val counter" data-target="2">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-lbl">Yrs LLM in Prod</span>
                     </div>
                     <div class="stat-box">
                         <span class="stat-val">99.9</span><span class="stat-suffix">%</span>
                         <span class="stat-lbl">Uptime SLA</span>
                     </div>
                     <div class="stat-box">
-                        <span class="stat-val counter" data-target="30">0</span><span class="stat-suffix">%</span>
-                        <span class="stat-lbl">Deploy Speed ↑</span>
+                        <span class="stat-val">E2E</span><span class="stat-suffix"></span>
+                        <span class="stat-lbl">Prod Ownership</span>
                     </div>
                 </div>
             </div>
@@ -220,21 +224,41 @@
             <div class="about-layout">
                 <div class="about-text-col">
                     <p class="about-lead">
-                        Senior DevOps / SRE &amp; <strong>Agentic AI Automation Engineer</strong> with <strong>8+ years</strong> architecting and operating cloud-native infrastructure across <strong>AWS, Azure, and GCP</strong> — and a sharp focus on bringing <strong>AI into the platform layer</strong> through agentic automation, RAG, and MLOps.
+                        <strong>Full Stack AI Engineer</strong> with <strong>8+ years</strong> of software and platform engineering and
+                        <strong>2+ years building LLM applications that run in production</strong> — agentic workflows over enterprise
+                        data, in Python, on <strong>Azure OpenAI</strong>, with <strong>PostgreSQL + pgvector</strong> underneath and
+                        <strong>React/TypeScript</strong> in front.
                     </p>
                     <p class="about-body">
-                        Currently driving cloud transformation at <strong>Abu Dhabi Commercial Bank (ADCB)</strong>, one of the UAE's largest financial institutions — building multi-cluster Kubernetes platforms that sustain <strong>99.9% reliability for critical banking services</strong>, and engineering zero-downtime CI/CD pipelines used across the enterprise at scale.
+                        My day job is <strong>Abu Dhabi Commercial Bank (ADCB)</strong> — a regulated financial institution where nothing
+                        ships without a control around it. That environment shaped how I build AI: <strong>enterprise-hosted models</strong>
+                        over public endpoints, private networking and Key Vault-backed secrets, deterministic tools instead of
+                        free-form generation wherever a number is involved, and a full <strong>audit trail of every prompt, tool call,
+                        and decision</strong>. I've sustained <strong>99.9% reliability</strong> for critical banking services and shipped
+                        zero-downtime releases across the enterprise — so "production" to me means SLOs, rollback, and on-call, not a demo link.
                     </p>
                     <p class="about-body">
-                        Beyond core DevOps, I design and ship <strong>Agentic AI systems</strong> — building autonomous AI agents, <strong>Python RAG pipelines</strong> (retrieval-augmented generation over vector stores), and end-to-end <strong>MLOps / LLMOps deployment</strong> on <strong>AWS Bedrock and LLMs</strong> — backed by the <strong>Microsoft Certified: Azure AI Apps and Agents Developer Associate</strong> credential. I led <strong>DevYoddha</strong>, a live agentic AI calling platform for the HR community, from zero to production — owning the AI integration stack, containerization, and cloud-native rollout. Deep networking (VNet/VPC, VPN/IPSec, private endpoints) and a DevSecOps-first mindset throughout.
+                        I led <strong>DevYoddha</strong> (<a href="https://devyoddha.com/" target="_blank" class="proj-link">devyoddha.com</a>)
+                        from zero to a live product for the <strong>HR community</strong> — autonomous calling agents doing candidate
+                        screening, scheduling, and real-time engagement. I owned it <strong>end to end</strong>: agent orchestration and
+                        planning, tool calling and structured output, retrieval, the FastAPI backend, the React front end, containers,
+                        pipelines, and the production rollout. Credentialed as <strong>Microsoft Certified: Azure AI Apps and Agents
+                        Developer Associate</strong>.
+                    </p>
+                    <p class="about-body">
+                        The part I care most about is the unglamorous part: <strong>data quality</strong>. Agents over HR and finance data
+                        are only as trustworthy as the reconciliation behind them — schema and type validation on ingest,
+                        row- and total-level reconciliation against source systems, <strong>outlier and anomaly detection</strong> before
+                        anything reaches a human, and an explicit <strong>escalation path</strong> when confidence is low. A model that is
+                        confidently wrong about headcount or cost is worse than no model at all.
                     </p>
                     <div class="about-pillars">
-                        <div class="pillar"><i class="fas fa-robot"></i><span>Agentic AI &amp; Automation</span></div>
-                        <div class="pillar"><i class="fas fa-brain"></i><span>RAG · LLMOps · MLOps</span></div>
-                        <div class="pillar"><i class="fab fa-python"></i><span>Python Automation</span></div>
-                        <div class="pillar"><i class="fab fa-aws"></i><span>AWS &amp; Bedrock</span></div>
-                        <div class="pillar"><i class="fas fa-chart-line"></i><span>SRE &amp; Observability</span></div>
-                        <div class="pillar"><i class="fas fa-shield-alt"></i><span>DevSecOps</span></div>
+                        <div class="pillar"><i class="fas fa-robot"></i><span>Agentic Workflows</span></div>
+                        <div class="pillar"><i class="fas fa-wrench"></i><span>Tool Calling &amp; Structured Output</span></div>
+                        <div class="pillar"><i class="fas fa-database"></i><span>PostgreSQL · pgvector · SQL</span></div>
+                        <div class="pillar"><i class="fab fa-python"></i><span>Python · pandas · FastAPI</span></div>
+                        <div class="pillar"><i class="fab fa-react"></i><span>React &amp; TypeScript</span></div>
+                        <div class="pillar"><i class="fas fa-scale-balanced"></i><span>Validation &amp; Reconciliation</span></div>
                     </div>
                 </div>
 
@@ -273,14 +297,259 @@
     </section>
 
     <!-- ═══════════════════════════════════════════
+         AI SYSTEMS — HOW I BUILD FOR PRODUCTION
+    ═══════════════════════════════════════════ -->
+    <section id="ai-systems" class="section section-alt">
+        <div class="section-wrap">
+            <div class="section-eyebrow">02 — AI Systems</div>
+            <h2 class="section-heading">Production Agents Over Enterprise Data</h2>
+            <p class="section-sub">
+                People make real decisions on what an agent outputs. This is the pipeline I build so those decisions are safe —
+                <strong>the validation layer carries more weight than the model</strong>.
+            </p>
+
+            <div class="pipe-grid">
+
+                <div class="pipe-card reveal">
+                    <div class="pipe-step">01</div>
+                    <div class="pipe-icon"><i class="fas fa-file-import"></i></div>
+                    <h3>Ingest &amp; Contract</h3>
+                    <p>SAP extracts, HR exports and finance spreadsheets pulled with <strong>pandas / openpyxl</strong>, then forced through an explicit
+                    <strong>Pydantic schema contract</strong> — types, ranges, nullability, referential keys, date and currency normalisation.
+                    Rows that fail are <strong>quarantined with a reason code</strong>, never silently coerced.</p>
+                    <div class="pipe-tags"><span>pandas</span><span>openpyxl</span><span>Pydantic</span><span>SAP extracts</span></div>
+                </div>
+
+                <div class="pipe-card reveal">
+                    <div class="pipe-step">02</div>
+                    <div class="pipe-icon"><i class="fas fa-scale-balanced"></i></div>
+                    <h3>Reconcile &amp; Profile</h3>
+                    <p>Row counts and <strong>control totals reconciled against the source system</strong> before anything is queryable.
+                    Period-over-period deltas, <strong>outlier detection</strong> (IQR / z-score / rule thresholds), duplicate and
+                    orphan checks, and freshness/completeness scoring per feed. A failed reconciliation <strong>blocks the load</strong> and raises an alert.</p>
+                    <div class="pipe-tags"><span>Control totals</span><span>Outlier detection</span><span>Drift checks</span><span>Data SLAs</span></div>
+                </div>
+
+                <div class="pipe-card reveal">
+                    <div class="pipe-step">03</div>
+                    <div class="pipe-icon"><i class="fas fa-database"></i></div>
+                    <h3>Store &amp; Retrieve</h3>
+                    <p><strong>PostgreSQL</strong> as the system of record, <strong>pgvector</strong> for embeddings in the same database —
+                    so semantic search and relational filters run in one transaction. Hybrid retrieval (SQL predicates + vector similarity),
+                    <strong>row-level security by entity and cost centre</strong>, and every chunk carrying lineage back to its source row.</p>
+                    <div class="pipe-tags"><span>PostgreSQL</span><span>pgvector</span><span>Hybrid search</span><span>Row-level access</span></div>
+                </div>
+
+                <div class="pipe-card reveal">
+                    <div class="pipe-step">04</div>
+                    <div class="pipe-icon"><i class="fas fa-diagram-project"></i></div>
+                    <h3>Plan &amp; Reason</h3>
+                    <p>An explicit <strong>agent graph</strong> (LangGraph / Semantic Kernel / custom state machine): plan → select tool → act → critique → answer,
+                    with bounded steps and no infinite loops. Numbers come from <strong>deterministic SQL and Python tools</strong>, never from the model's arithmetic.
+                    Responses are <strong>JSON-schema-constrained structured output</strong>, validated before they leave the service.</p>
+                    <div class="pipe-tags"><span>LangGraph</span><span>Semantic Kernel</span><span>Tool calling</span><span>Structured output</span></div>
+                </div>
+
+                <div class="pipe-card reveal">
+                    <div class="pipe-step">05</div>
+                    <div class="pipe-icon"><i class="fas fa-user-shield"></i></div>
+                    <h3>Guard &amp; Escalate</h3>
+                    <p>No answer ships without a <strong>citation to the underlying row</strong>. Confidence thresholds, disagreement between
+                    tool result and narrative, or data older than its SLA all trigger an <strong>escalation to a human</strong> rather than a guess.
+                    Write actions sit behind <strong>human-in-the-loop approval</strong>; PII is masked before it ever reaches a prompt.</p>
+                    <div class="pipe-tags"><span>Escalation paths</span><span>Human-in-the-loop</span><span>Citations</span><span>PII masking</span></div>
+                </div>
+
+                <div class="pipe-card reveal">
+                    <div class="pipe-step">06</div>
+                    <div class="pipe-icon"><i class="fas fa-code-branch"></i></div>
+                    <h3>Version &amp; Evaluate</h3>
+                    <p>Prompts are <strong>versioned artefacts in Git</strong>, not strings in code — each with an ID, changelog, and pinned model version.
+                    A <strong>golden-set evaluation harness runs in CI on every prompt or model change</strong>, gating regressions on accuracy,
+                    schema validity, refusal rate and cost. Rollback is a redeploy of the previous prompt version.</p>
+                    <div class="pipe-tags"><span>Prompt versioning</span><span>Golden sets</span><span>Regression gates</span><span>CI/CD</span></div>
+                </div>
+
+                <div class="pipe-card reveal">
+                    <div class="pipe-step">07</div>
+                    <div class="pipe-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+                    <h3>Observe &amp; Audit</h3>
+                    <p>Every run emits a <strong>full trace</strong> — prompt version, retrieved context, each tool call and its arguments,
+                    token spend, latency, and the final structured payload. Dashboards on quality and cost per workflow;
+                    <strong>an auditor can reconstruct exactly why the system said what it said</strong>, months later.</p>
+                    <div class="pipe-tags"><span>Trace logging</span><span>Cost telemetry</span><span>Grafana</span><span>Audit trail</span></div>
+                </div>
+
+                <div class="pipe-card reveal">
+                    <div class="pipe-step">08</div>
+                    <div class="pipe-icon"><i class="fas fa-server"></i></div>
+                    <h3>Ship &amp; Operate</h3>
+                    <p><strong>Azure OpenAI</strong> as an enterprise-hosted deployment behind <strong>private endpoints</strong>, secrets in Key Vault,
+                    auth and RBAC through <strong>Entra ID</strong>. <strong>FastAPI</strong> services and a <strong>React + TypeScript</strong> front end,
+                    containerised, deployed via CI/CD to Kubernetes with SLOs, alerting and rollback — the same discipline as any banking workload.</p>
+                    <div class="pipe-tags"><span>Azure OpenAI</span><span>FastAPI</span><span>React · TypeScript</span><span>AKS · CI/CD</span></div>
+                </div>
+
+            </div>
+
+            <div class="principles-strip reveal">
+                <div class="prin"><i class="fas fa-calculator"></i><div><strong>Deterministic where it can be</strong><span>Models route and explain; SQL and Python compute. No LLM arithmetic on money or headcount.</span></div></div>
+                <div class="prin"><i class="fas fa-ban"></i><div><strong>Fail loudly, never plausibly</strong><span>An abstention with a reason beats a confident wrong number in front of a decision-maker.</span></div></div>
+                <div class="prin"><i class="fas fa-fingerprint"></i><div><strong>Every claim traceable</strong><span>Answer → citation → source row → ingest batch → reconciliation result.</span></div></div>
+                <div class="prin"><i class="fas fa-vial"></i><div><strong>No prompt ships untested</strong><span>Golden-set evals in CI gate every prompt and model change, like any other code path.</span></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         ROLE FIT
+    ═══════════════════════════════════════════ -->
+    <section id="role-fit" class="section">
+        <div class="section-wrap">
+            <div class="section-eyebrow">03 — Role Fit</div>
+            <h2 class="section-heading">Full Stack AI Engineer — Requirement Map</h2>
+            <p class="section-sub">
+                Each mandatory requirement for a <strong>Full Stack AI Engineer building production AI agents over enterprise HR
+                and finance data</strong>, mapped to where I've actually done it.
+            </p>
+
+            <div class="fit-grid">
+
+                <div class="fit-row reveal">
+                    <div class="fit-check"><i class="fas fa-check"></i></div>
+                    <div class="fit-body">
+                        <div class="fit-req">6+ years software engineering, incl. 2+ years LLM applications in production</div>
+                        <div class="fit-ev"><strong>8+ years</strong> engineering across TCS, Accenture, Enboarder and ADCB; <strong>2+ years</strong> building and running LLM systems in production — DevYoddha's live agentic calling platform and a production RAG service on FastAPI.</div>
+                    </div>
+                    <div class="fit-tag">8+ yrs</div>
+                </div>
+
+                <div class="fit-row reveal">
+                    <div class="fit-check"><i class="fas fa-check"></i></div>
+                    <div class="fit-body">
+                        <div class="fit-req">Strong Python (3.11+); working React and TypeScript</div>
+                        <div class="fit-ev">Python is my primary language — FastAPI services, Pydantic models, pandas pipelines, async tool layers, pytest. React + TypeScript front ends built and shipped for DevYoddha and this portfolio's UI.</div>
+                    </div>
+                    <div class="fit-tag">Core</div>
+                </div>
+
+                <div class="fit-row reveal">
+                    <div class="fit-check"><i class="fas fa-check"></i></div>
+                    <div class="fit-body">
+                        <div class="fit-req">LLM application engineering: tool calling, structured output, retrieval, prompt versioning</div>
+                        <div class="fit-ev">Tool/function calling with strict JSON-schema arguments, schema-validated structured output, hybrid retrieval over a vector store, and Git-versioned prompts gated by a golden-set eval harness in CI.</div>
+                    </div>
+                    <div class="fit-tag">Daily</div>
+                </div>
+
+                <div class="fit-row reveal">
+                    <div class="fit-check"><i class="fas fa-check"></i></div>
+                    <div class="fit-body">
+                        <div class="fit-req">Agentic workflows (LangGraph, Semantic Kernel or custom) with planning, escalation and logging</div>
+                        <div class="fit-ev">Graph-based agents with explicit planner → tool → critic states, bounded steps, retry and fallback policies, confidence-triggered escalation to humans, and full per-step trace logging for audit.</div>
+                    </div>
+                    <div class="fit-tag">Shipped</div>
+                </div>
+
+                <div class="fit-row reveal">
+                    <div class="fit-check"><i class="fas fa-check"></i></div>
+                    <div class="fit-body">
+                        <div class="fit-req">Azure OpenAI or equivalent enterprise-hosted deployment</div>
+                        <div class="fit-ev"><strong>Microsoft Certified: Azure AI Apps and Agents Developer Associate.</strong> Azure-first practitioner at ADCB — private endpoints, Key Vault, Entra ID RBAC, AKS. Also production experience with AWS Bedrock as an enterprise-hosted equivalent.</div>
+                    </div>
+                    <div class="fit-tag">Certified</div>
+                </div>
+
+                <div class="fit-row reveal">
+                    <div class="fit-check"><i class="fas fa-check"></i></div>
+                    <div class="fit-body">
+                        <div class="fit-req">Strong SQL and PostgreSQL including pgvector</div>
+                        <div class="fit-ev">PostgreSQL as system of record with <strong>pgvector</strong> for embeddings — hybrid SQL-filter + similarity retrieval, indexing and query tuning, migrations, and row-level access control by entity and cost centre.</div>
+                    </div>
+                    <div class="fit-tag">Hands-on</div>
+                </div>
+
+                <div class="fit-row reveal">
+                    <div class="fit-check"><i class="fas fa-check"></i></div>
+                    <div class="fit-body">
+                        <div class="fit-req">Integration with SAP and spreadsheet data (pandas, openpyxl)</div>
+                        <div class="fit-ev">Enterprise extract pipelines in pandas/openpyxl — messy multi-sheet workbooks, merged headers, mixed types and locale-specific dates normalised into typed, contract-checked tables before an agent is allowed near them.</div>
+                    </div>
+                    <div class="fit-tag">Pipelines</div>
+                </div>
+
+                <div class="fit-row reveal">
+                    <div class="fit-check"><i class="fas fa-check"></i></div>
+                    <div class="fit-body">
+                        <div class="fit-req">Serious rigour on data quality — validation, reconciliation, outlier detection</div>
+                        <div class="fit-ev">Schema and business-rule validation on ingest, control-total reconciliation against source systems, IQR/z-score outlier and duplicate detection, freshness SLAs — with failed checks blocking the load and alerting, not warning quietly.</div>
+                    </div>
+                    <div class="fit-tag">Non-negotiable</div>
+                </div>
+
+                <div class="fit-row reveal">
+                    <div class="fit-check"><i class="fas fa-check"></i></div>
+                    <div class="fit-body">
+                        <div class="fit-req">Proven end-to-end ownership of a system in production</div>
+                        <div class="fit-ev">Took <strong>DevYoddha</strong> from zero to a live product used by the HR community — architecture, agent stack, backend, front end, containers, pipelines, cloud rollout and ongoing operation. At ADCB I own platforms carrying <strong>99.9% reliability</strong> for critical banking services.</div>
+                    </div>
+                    <div class="fit-tag">Owner</div>
+                </div>
+
+            </div>
+
+            <div class="fit-note reveal">
+                <i class="fas fa-location-dot"></i>
+                <span><strong>Based in Abu Dhabi, UAE</strong> — already onsite for a hybrid role, employer-transferable visa, no relocation lead time.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
          EXPERIENCE
     ═══════════════════════════════════════════ -->
     <section id="experience" class="section section-alt">
         <div class="section-wrap">
-            <div class="section-eyebrow">02 — Experience</div>
+            <div class="section-eyebrow">04 — Experience</div>
             <h2 class="section-heading">Work History</h2>
 
             <div class="timeline">
+
+                <!-- DEVYODDHA — LEAD AI ENGINEER -->
+                <div class="tl-item reveal">
+                    <div class="tl-marker"><div class="tl-dot"></div></div>
+                    <div class="tl-card tl-card-featured tl-card-ai">
+                        <div class="tl-fintech-strip ai-strip">🤖 Production LLM System · Live Product · End-to-End Ownership</div>
+                        <div class="tl-header">
+                            <div class="tl-icon-wrap devyoddha-color"><i class="fas fa-robot"></i></div>
+                            <div class="tl-title-block">
+                                <h3 class="tl-role">Lead AI Engineer &amp; Founder — DevYoddha</h3>
+                                <div class="tl-company">DevYoddha · <a href="https://devyoddha.com/" target="_blank" class="proj-link">devyoddha.com</a></div>
+                                <div class="tl-meta-row">
+                                    <span><i class="fas fa-map-marker-alt"></i> Abu Dhabi, UAE 🇦🇪</span>
+                                    <span><i class="fas fa-calendar-alt"></i> 2024 – Present</span>
+                                    <span><i class="fas fa-circle-nodes"></i> Alongside full-time role</span>
+                                </div>
+                            </div>
+                            <div class="tl-badge ai-badge">Live · LLM in Prod</div>
+                        </div>
+                        <p class="tl-context">A live agentic AI platform for the HR community — autonomous calling agents that screen candidates, schedule interviews, and handle real-time engagement over real HR data. Built, shipped and operated end to end.</p>
+                        <ul class="tl-bullets">
+                            <li>Designed and shipped a <strong>production agentic workflow</strong> — an explicit planner → tool → critic graph with bounded steps, retry/fallback policy, and <strong>confidence-triggered escalation to a human recruiter</strong> instead of guessing</li>
+                            <li>Built the LLM application layer in <strong>Python 3.11 / FastAPI</strong>: <strong>tool calling</strong> against deterministic backend functions, <strong>JSON-schema structured output</strong> validated with Pydantic before release, and <strong>retrieval</strong> over candidate and role documents</li>
+                            <li>Treated prompts as <strong>versioned artefacts in Git</strong> with pinned model versions and a <strong>golden-set evaluation harness in CI</strong> — gating accuracy, schema validity and cost regressions before any prompt change deploys</li>
+                            <li>Modelled the data layer on <strong>PostgreSQL with pgvector</strong> — embeddings alongside relational records so semantic retrieval and SQL filters resolve in a single query path, with lineage from every answer back to its source row</li>
+                            <li>Ingested and normalised messy <strong>HR spreadsheet and export data with pandas / openpyxl</strong>, enforcing schema contracts, deduplication and <strong>outlier detection</strong> before records ever reached an agent</li>
+                            <li>Built the operator-facing console in <strong>React + TypeScript</strong>, and instrumented <strong>full trace logging</strong> — prompt version, retrieved context, every tool call, tokens, latency and cost per conversation</li>
+                            <li>Owned the entire production surface: <strong>Docker, GitHub Actions CI/CD, cloud rollout, monitoring, on-call and iteration</strong> against live user feedback</li>
+                        </ul>
+                        <div class="tl-tags">
+                            <span>Agentic Workflows</span><span>Tool Calling</span><span>Structured Output</span><span>Prompt Versioning</span>
+                            <span>RAG / Retrieval</span><span>Python 3.11</span><span>FastAPI</span><span>PostgreSQL + pgvector</span>
+                            <span>React</span><span>TypeScript</span><span>pandas</span><span>Voice AI</span>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- ADCB — UAE CURRENT -->
                 <div class="tl-item reveal">
@@ -301,6 +570,8 @@
                         </div>
                         <p class="tl-context">One of the UAE's largest financial institutions — building mission-critical cloud-native banking infrastructure at enterprise scale.</p>
                         <ul class="tl-bullets">
+                            <li>Build <strong>Python automation and data-integrity tooling</strong> over enterprise operational data — schema validation, reconciliation against source systems, and anomaly detection on pipeline and platform metrics feeding daily engineering decisions</li>
+                            <li>Run <strong>Azure-native AI workloads securely</strong> — enterprise-hosted model endpoints behind <strong>private endpoints and VNet isolation</strong>, secrets in <strong>Key Vault</strong>, identity and RBAC via <strong>Entra ID</strong> — the controls a regulated bank requires before any LLM touches internal data</li>
                             <li>Operate <strong>production Kubernetes (AKS / GKE) multi-cluster</strong> platforms, defining and tracking SLOs/SLIs and automating scaling to sustain <strong>99.9% reliability</strong> for critical banking services</li>
                             <li>Architected <strong>Azure-first multi-cloud IaC</strong> using <strong>Bicep and Terraform</strong> with versioned modules and workspace-separated environments — reducing infrastructure spin-up time to <strong>under 20 minutes</strong></li>
                             <li>Engineered end-to-end CI/CD pipelines across <strong>Azure DevOps, GitHub Actions, and Bitbucket Pipelines</strong> — 30% faster deployments and <strong>100% successful deployment rate</strong> across all environments</li>
@@ -309,8 +580,9 @@
                             <li>Delivered within <strong>Agile / sprint-based cross-functional teams</strong>, driving observability through <strong>Azure Monitor, Prometheus, and Grafana</strong> to improve incident response and release confidence</li>
                         </ul>
                         <div class="tl-tags">
-                            <span>Azure AKS</span><span>Bicep</span><span>Terraform</span><span>Azure DevOps</span>
-                            <span>GitHub Actions</span><span>ArgoCD</span><span>Helm</span><span>Prometheus</span><span>SBOM</span><span>GitOps</span>
+                            <span>Azure AKS</span><span>Python</span><span>Entra ID</span><span>Key Vault</span><span>Private Endpoints</span>
+                            <span>Bicep</span><span>Terraform</span><span>Azure DevOps</span>
+                            <span>GitHub Actions</span><span>ArgoCD</span><span>Prometheus</span><span>GitOps</span>
                         </div>
                     </div>
                 </div>
@@ -335,7 +607,7 @@
                             <li>Managed SLOs/SLIs for critical services across <strong>OpenShift and Kubernetes</strong> multi-cluster environments, automating deployment and scaling to sustain high availability across <strong>10+ production clusters</strong></li>
                             <li>Built CI/CD pipelines using <strong>Jenkins, GitLab CI, Terraform, and Ansible</strong>, reducing deployment time by <strong>30%</strong> and ensuring 100% successful deployments</li>
                             <li>Delivered <strong>zero-downtime releases</strong> via rolling updates with <strong>Helm and Argo CD</strong>, leveraging HPA and Cluster Autoscaler for consistent environment parity</li>
-                            <li>Developed <strong>Python and shell scripting</strong> automation to eliminate manual toil, targeting a <strong>20% reduction</strong> in repetitive operational tasks</li>
+                            <li>Developed <strong>Python automation and data-processing tooling</strong> across an <strong>HR / employee-onboarding SaaS</strong> — working directly with people-data pipelines, SQL datastores and export formats — eliminating manual toil and targeting a <strong>20% reduction</strong> in repetitive operational tasks</li>
                             <li>Monitored with <strong>Prometheus, Grafana, Azure Monitor, and GCP Operations Suite</strong> — improved SLA adherence by <strong>15%</strong></li>
                             <li><strong>Mentored a team of DevOps engineers</strong> within an Agile delivery model, fostering collaboration that reduced project delays by <strong>20%</strong></li>
                         </ul>
@@ -413,128 +685,140 @@
     ═══════════════════════════════════════════ -->
     <section id="skills" class="section">
         <div class="section-wrap">
-            <div class="section-eyebrow">03 — Skills</div>
+            <div class="section-eyebrow">05 — Skills</div>
             <h2 class="section-heading">Technical Arsenal</h2>
 
             <div class="skills-grid">
 
                 <div class="skill-card reveal" data-tilt>
                     <div class="sk-header">
-                        <div class="sk-icon azure-color"><i class="fab fa-microsoft"></i></div>
-                        <h3>Azure Platform (Primary)</h3>
+                        <div class="sk-icon ai-color"><i class="fas fa-diagram-project"></i></div>
+                        <h3>LLM Application Engineering</h3>
                     </div>
                     <div class="sk-bars">
-                        <div class="sk-row"><span>AKS · Azure DevOps · Bicep · Entra ID · Key Vault</span><div class="sk-bar"><div class="sk-fill" data-width="96" style="--bar-color:#0078d4"></div></div></div>
-                        <div class="sk-row"><span>Azure Monitor · Azure Front Door · App Gateway</span><div class="sk-bar"><div class="sk-fill" data-width="92" style="--bar-color:#00b4d8"></div></div></div>
-                        <div class="sk-row"><span>Azure VNet · Private Endpoints · Azure SQL</span><div class="sk-bar"><div class="sk-fill" data-width="88" style="--bar-color:#0078d4"></div></div></div>
-                    </div>
-                </div>
-
-                <div class="skill-card reveal" data-tilt>
-                    <div class="sk-header">
-                        <div class="sk-icon aws-color"><i class="fab fa-aws"></i></div>
-                        <h3>AWS Platform</h3>
-                    </div>
-                    <div class="sk-bars">
-                        <div class="sk-row"><span>EKS · EC2 · S3 · Lambda · RDS · CloudFront</span><div class="sk-bar"><div class="sk-fill" data-width="93" style="--bar-color:#ff9900"></div></div></div>
-                        <div class="sk-row"><span>CloudFormation · SAM · API Gateway · Bedrock</span><div class="sk-bar"><div class="sk-fill" data-width="88" style="--bar-color:#ff9900"></div></div></div>
-                        <div class="sk-row"><span>IAM · GuardDuty · CloudWatch · VPC · WAF</span><div class="sk-bar"><div class="sk-fill" data-width="90" style="--bar-color:#ff6600"></div></div></div>
-                    </div>
-                </div>
-
-                <div class="skill-card reveal" data-tilt>
-                    <div class="sk-header">
-                        <div class="sk-icon k8s-color"><i class="fas fa-dharmachakra"></i></div>
-                        <h3>Kubernetes &amp; Orchestration</h3>
-                    </div>
-                    <div class="sk-bars">
-                        <div class="sk-row"><span>AKS / GKE / OpenShift — Multi-cluster</span><div class="sk-bar"><div class="sk-fill" data-width="95" style="--bar-color:#326ce5"></div></div></div>
-                        <div class="sk-row"><span>Helm · Argo CD (GitOps) · HPA · Cluster Autoscaler</span><div class="sk-bar"><div class="sk-fill" data-width="93" style="--bar-color:#e96d76"></div></div></div>
-                        <div class="sk-row"><span>Docker · Container Hardening · SBOM · Image Scanning</span><div class="sk-bar"><div class="sk-fill" data-width="90" style="--bar-color:#2496ed"></div></div></div>
-                    </div>
-                </div>
-
-                <div class="skill-card reveal" data-tilt>
-                    <div class="sk-header">
-                        <div class="sk-icon tf-color"><i class="fas fa-layer-group"></i></div>
-                        <h3>Infrastructure as Code</h3>
-                    </div>
-                    <div class="sk-bars">
-                        <div class="sk-row"><span>Terraform (Versioned Modules, Workspaces)</span><div class="sk-bar"><div class="sk-fill" data-width="96" style="--bar-color:#7b42bc"></div></div></div>
-                        <div class="sk-row"><span>Azure Bicep (ARM-native IaC)</span><div class="sk-bar"><div class="sk-fill" data-width="90" style="--bar-color:#0078d4"></div></div></div>
-                        <div class="sk-row"><span>Ansible · AWS CloudFormation · Puppet</span><div class="sk-bar"><div class="sk-fill" data-width="82" style="--bar-color:#e00000"></div></div></div>
-                    </div>
-                </div>
-
-                <div class="skill-card reveal" data-tilt>
-                    <div class="sk-header">
-                        <div class="sk-icon cicd-color"><i class="fas fa-infinity"></i></div>
-                        <h3>CI/CD &amp; GitOps</h3>
-                    </div>
-                    <div class="sk-bars">
-                        <div class="sk-row"><span>Azure DevOps Pipelines</span><div class="sk-bar"><div class="sk-fill" data-width="95" style="--bar-color:#0078d4"></div></div></div>
-                        <div class="sk-row"><span>GitHub Actions · GitLab CI · Bitbucket Pipelines</span><div class="sk-bar"><div class="sk-fill" data-width="92" style="--bar-color:#2dba4e"></div></div></div>
-                        <div class="sk-row"><span>Jenkins · ArgoCD · Blue-Green · Canary</span><div class="sk-bar"><div class="sk-fill" data-width="88" style="--bar-color:#d24939"></div></div></div>
-                    </div>
-                </div>
-
-                <div class="skill-card reveal" data-tilt>
-                    <div class="sk-header">
-                        <div class="sk-icon mon-color"><i class="fas fa-chart-line"></i></div>
-                        <h3>Observability &amp; SRE</h3>
-                    </div>
-                    <div class="sk-bars">
-                        <div class="sk-row"><span>Prometheus / Grafana — SLOs &amp; SLIs</span><div class="sk-bar"><div class="sk-fill" data-width="93" style="--bar-color:#e6522c"></div></div></div>
-                        <div class="sk-row"><span>Azure Monitor / Application Insights</span><div class="sk-bar"><div class="sk-fill" data-width="91" style="--bar-color:#0078d4"></div></div></div>
-                        <div class="sk-row"><span>GCP Operations Suite · ELK Stack</span><div class="sk-bar"><div class="sk-fill" data-width="82" style="--bar-color:#4285f4"></div></div></div>
-                    </div>
-                </div>
-
-                <div class="skill-card reveal" data-tilt>
-                    <div class="sk-header">
-                        <div class="sk-icon code-color"><i class="fas fa-code"></i></div>
-                        <h3>Programming &amp; Automation</h3>
-                    </div>
-                    <div class="sk-bars">
-                        <div class="sk-row"><span>Python (Automation · RAG · AI Agents · APIs)</span><div class="sk-bar"><div class="sk-fill" data-width="93" style="--bar-color:#3776ab"></div></div></div>
-                        <div class="sk-row"><span>Bash / Shell Scripting · Infra Automation</span><div class="sk-bar"><div class="sk-fill" data-width="94" style="--bar-color:#4eaa25"></div></div></div>
-                        <div class="sk-row"><span>Golang · SQL · REST &amp; LLM APIs</span><div class="sk-bar"><div class="sk-fill" data-width="78" style="--bar-color:#00acd7"></div></div></div>
-                    </div>
-                </div>
-
-                <div class="skill-card reveal" data-tilt>
-                    <div class="sk-header">
-                        <div class="sk-icon sec-color"><i class="fas fa-shield-alt"></i></div>
-                        <h3>Security &amp; Networking</h3>
-                    </div>
-                    <div class="sk-bars">
-                        <div class="sk-row"><span>Azure Entra ID · RBAC · Key Vault · DevSecOps</span><div class="sk-bar"><div class="sk-fill" data-width="90" style="--bar-color:#ef4444"></div></div></div>
-                        <div class="sk-row"><span>VNet Peering · Private Endpoints · VPN/IPSec</span><div class="sk-bar"><div class="sk-fill" data-width="86" style="--bar-color:#f97316"></div></div></div>
-                        <div class="sk-row"><span>SBOM · Image Scanning · Zero-CVE Pipelines</span><div class="sk-bar"><div class="sk-fill" data-width="88" style="--bar-color:#dc2626"></div></div></div>
+                        <div class="sk-row"><span>Tool / function calling · JSON-schema structured output</span><div class="sk-bar"><div class="sk-fill" data-width="92" style="--bar-color:#8b5cf6"></div></div></div>
+                        <div class="sk-row"><span>Retrieval &amp; RAG · chunking · re-ranking · citations</span><div class="sk-bar"><div class="sk-fill" data-width="90" style="--bar-color:#a855f7"></div></div></div>
+                        <div class="sk-row"><span>Prompt versioning · golden-set evals · regression gates</span><div class="sk-bar"><div class="sk-fill" data-width="88" style="--bar-color:#7c3aed"></div></div></div>
                     </div>
                 </div>
 
                 <div class="skill-card reveal" data-tilt>
                     <div class="sk-header">
                         <div class="sk-icon ai-color"><i class="fas fa-robot"></i></div>
-                        <h3>Agentic AI &amp; Automation</h3>
+                        <h3>Agentic Workflows &amp; Orchestration</h3>
                     </div>
                     <div class="sk-bars">
-                        <div class="sk-row"><span>Agentic AI · AI Agents · LLM Orchestration</span><div class="sk-bar"><div class="sk-fill" data-width="88" style="--bar-color:#8b5cf6"></div></div></div>
-                        <div class="sk-row"><span>AWS Bedrock · LLMs · Generative AI</span><div class="sk-bar"><div class="sk-fill" data-width="86" style="--bar-color:#a855f7"></div></div></div>
-                        <div class="sk-row"><span>AI-Driven Workflow &amp; Ops Automation (AIOps)</span><div class="sk-bar"><div class="sk-fill" data-width="84" style="--bar-color:#7c3aed"></div></div></div>
+                        <div class="sk-row"><span>LangGraph · Semantic Kernel · custom state graphs</span><div class="sk-bar"><div class="sk-fill" data-width="88" style="--bar-color:#8b5cf6"></div></div></div>
+                        <div class="sk-row"><span>Planning · bounded steps · retry &amp; fallback policy</span><div class="sk-bar"><div class="sk-fill" data-width="87" style="--bar-color:#a855f7"></div></div></div>
+                        <div class="sk-row"><span>Escalation to human · HITL approval · trace logging</span><div class="sk-bar"><div class="sk-fill" data-width="90" style="--bar-color:#7c3aed"></div></div></div>
                     </div>
                 </div>
 
                 <div class="skill-card reveal" data-tilt>
                     <div class="sk-header">
-                        <div class="sk-icon ai-color"><i class="fas fa-brain"></i></div>
-                        <h3>RAG · MLOps · LLMOps</h3>
+                        <div class="sk-icon code-color"><i class="fab fa-python"></i></div>
+                        <h3>Python &amp; Backend Engineering</h3>
                     </div>
                     <div class="sk-bars">
-                        <div class="sk-row"><span>Python RAG Pipelines · Vector Databases · Embeddings</span><div class="sk-bar"><div class="sk-fill" data-width="86" style="--bar-color:#a855f7"></div></div></div>
-                        <div class="sk-row"><span>MLOps / LLMOps · Model Deployment &amp; Serving</span><div class="sk-bar"><div class="sk-fill" data-width="83" style="--bar-color:#8b5cf6"></div></div></div>
-                        <div class="sk-row"><span>FastAPI · Containerized AI Microservices · Cloud Run</span><div class="sk-bar"><div class="sk-fill" data-width="85" style="--bar-color:#3776ab"></div></div></div>
+                        <div class="sk-row"><span>Python 3.11+ · async · typing · pytest</span><div class="sk-bar"><div class="sk-fill" data-width="94" style="--bar-color:#3776ab"></div></div></div>
+                        <div class="sk-row"><span>FastAPI · Pydantic · REST &amp; streaming APIs</span><div class="sk-bar"><div class="sk-fill" data-width="92" style="--bar-color:#009688"></div></div></div>
+                        <div class="sk-row"><span>pandas · openpyxl · NumPy — data pipelines</span><div class="sk-bar"><div class="sk-fill" data-width="88" style="--bar-color:#150458"></div></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal" data-tilt>
+                    <div class="sk-header">
+                        <div class="sk-icon pg-color"><i class="fas fa-database"></i></div>
+                        <h3>SQL · PostgreSQL · pgvector</h3>
+                    </div>
+                    <div class="sk-bars">
+                        <div class="sk-row"><span>PostgreSQL — schema design, indexing, query tuning</span><div class="sk-bar"><div class="sk-fill" data-width="90" style="--bar-color:#336791"></div></div></div>
+                        <div class="sk-row"><span>pgvector — embeddings, hybrid search, ANN indexes</span><div class="sk-bar"><div class="sk-fill" data-width="88" style="--bar-color:#4169e1"></div></div></div>
+                        <div class="sk-row"><span>Advanced SQL · CTEs · window functions · migrations</span><div class="sk-bar"><div class="sk-fill" data-width="90" style="--bar-color:#336791"></div></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal" data-tilt>
+                    <div class="sk-header">
+                        <div class="sk-icon dq-color"><i class="fas fa-scale-balanced"></i></div>
+                        <h3>Data Quality &amp; Reconciliation</h3>
+                    </div>
+                    <div class="sk-bars">
+                        <div class="sk-row"><span>Schema / business-rule validation · quarantine on fail</span><div class="sk-bar"><div class="sk-fill" data-width="92" style="--bar-color:#10b981"></div></div></div>
+                        <div class="sk-row"><span>Control-total reconciliation vs source systems</span><div class="sk-bar"><div class="sk-fill" data-width="90" style="--bar-color:#059669"></div></div></div>
+                        <div class="sk-row"><span>Outlier &amp; anomaly detection · drift · freshness SLAs</span><div class="sk-bar"><div class="sk-fill" data-width="88" style="--bar-color:#34d399"></div></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal" data-tilt>
+                    <div class="sk-header">
+                        <div class="sk-icon azure-color"><i class="fab fa-microsoft"></i></div>
+                        <h3>Azure AI &amp; Enterprise Hosting</h3>
+                    </div>
+                    <div class="sk-bars">
+                        <div class="sk-row"><span>Azure OpenAI · enterprise-hosted model deployments</span><div class="sk-bar"><div class="sk-fill" data-width="89" style="--bar-color:#0078d4"></div></div></div>
+                        <div class="sk-row"><span>Private endpoints · Key Vault · Entra ID RBAC</span><div class="sk-bar"><div class="sk-fill" data-width="94" style="--bar-color:#00b4d8"></div></div></div>
+                        <div class="sk-row"><span>AWS Bedrock — equivalent enterprise-hosted LLM stack</span><div class="sk-bar"><div class="sk-fill" data-width="86" style="--bar-color:#ff9900"></div></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal" data-tilt>
+                    <div class="sk-header">
+                        <div class="sk-icon ts-color"><i class="fab fa-react"></i></div>
+                        <h3>Frontend — React &amp; TypeScript</h3>
+                    </div>
+                    <div class="sk-bars">
+                        <div class="sk-row"><span>React — component architecture, hooks, state</span><div class="sk-bar"><div class="sk-fill" data-width="82" style="--bar-color:#61dafb"></div></div></div>
+                        <div class="sk-row"><span>TypeScript — typed API contracts end to end</span><div class="sk-bar"><div class="sk-fill" data-width="80" style="--bar-color:#3178c6"></div></div></div>
+                        <div class="sk-row"><span>Agent consoles · streaming UI · review &amp; approval flows</span><div class="sk-bar"><div class="sk-fill" data-width="82" style="--bar-color:#61dafb"></div></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal" data-tilt>
+                    <div class="sk-header">
+                        <div class="sk-icon int-color"><i class="fas fa-plug"></i></div>
+                        <h3>Enterprise Data Integration</h3>
+                    </div>
+                    <div class="sk-bars">
+                        <div class="sk-row"><span>SAP &amp; ERP extracts · HR / finance master data</span><div class="sk-bar"><div class="sk-fill" data-width="82" style="--bar-color:#0faaff"></div></div></div>
+                        <div class="sk-row"><span>Spreadsheet ingestion — multi-sheet, merged, messy</span><div class="sk-bar"><div class="sk-fill" data-width="90" style="--bar-color:#1d6f42"></div></div></div>
+                        <div class="sk-row"><span>REST / API integration · scheduled &amp; event-driven ETL</span><div class="sk-bar"><div class="sk-fill" data-width="88" style="--bar-color:#f59e0b"></div></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal" data-tilt>
+                    <div class="sk-header">
+                        <div class="sk-icon mon-color"><i class="fas fa-magnifying-glass-chart"></i></div>
+                        <h3>LLM Observability &amp; Evaluation</h3>
+                    </div>
+                    <div class="sk-bars">
+                        <div class="sk-row"><span>Trace logging — prompts, tools, tokens, latency, cost</span><div class="sk-bar"><div class="sk-fill" data-width="90" style="--bar-color:#e6522c"></div></div></div>
+                        <div class="sk-row"><span>Eval harnesses · accuracy, schema validity, refusal rate</span><div class="sk-bar"><div class="sk-fill" data-width="87" style="--bar-color:#8b5cf6"></div></div></div>
+                        <div class="sk-row"><span>Prometheus · Grafana · Azure Monitor dashboards</span><div class="sk-bar"><div class="sk-fill" data-width="93" style="--bar-color:#0078d4"></div></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal" data-tilt>
+                    <div class="sk-header">
+                        <div class="sk-icon cicd-color"><i class="fas fa-infinity"></i></div>
+                        <h3>Ship &amp; Operate (Prod Discipline)</h3>
+                    </div>
+                    <div class="sk-bars">
+                        <div class="sk-row"><span>Docker · Kubernetes (AKS/GKE) · Helm · Argo CD</span><div class="sk-bar"><div class="sk-fill" data-width="94" style="--bar-color:#326ce5"></div></div></div>
+                        <div class="sk-row"><span>GitHub Actions · Azure DevOps · GitLab CI · Terraform</span><div class="sk-bar"><div class="sk-fill" data-width="94" style="--bar-color:#2dba4e"></div></div></div>
+                        <div class="sk-row"><span>SLOs · zero-downtime release · rollback · on-call</span><div class="sk-bar"><div class="sk-fill" data-width="93" style="--bar-color:#00d4ff"></div></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal" data-tilt>
+                    <div class="sk-header">
+                        <div class="sk-icon sec-color"><i class="fas fa-shield-halved"></i></div>
+                        <h3>Security &amp; Governance</h3>
+                    </div>
+                    <div class="sk-bars">
+                        <div class="sk-row"><span>PII masking · row-level access · least privilege</span><div class="sk-bar"><div class="sk-fill" data-width="88" style="--bar-color:#ef4444"></div></div></div>
+                        <div class="sk-row"><span>VNet · private endpoints · VPN/IPSec · secrets mgmt</span><div class="sk-bar"><div class="sk-fill" data-width="90" style="--bar-color:#f97316"></div></div></div>
+                        <div class="sk-row"><span>Auditability · SBOM · image scanning · zero-CVE gates</span><div class="sk-bar"><div class="sk-fill" data-width="88" style="--bar-color:#dc2626"></div></div></div>
                     </div>
                 </div>
 
@@ -547,7 +831,7 @@
     ═══════════════════════════════════════════ -->
     <section id="achievements" class="section section-alt">
         <div class="section-wrap">
-            <div class="section-eyebrow">04 — Impact</div>
+            <div class="section-eyebrow">06 — Impact</div>
             <h2 class="section-heading">Key Achievements</h2>
 
             <div class="ach-grid">
@@ -565,27 +849,27 @@
                 </div>
                 <div class="ach-card reveal">
                     <div class="ach-glow"></div>
-                    <div class="ach-metric"><span class="ach-num">&lt;20</span><span class="ach-unit">min</span></div>
-                    <div class="ach-name">Infra Spin-up</div>
-                    <div class="ach-desc">Reduced infrastructure provisioning to under 20 minutes using Bicep + Terraform versioned modules at ADCB</div>
+                    <div class="ach-metric"><span class="ach-num">Live</span><span class="ach-unit"></span></div>
+                    <div class="ach-name">Agentic AI Platform in Production</div>
+                    <div class="ach-desc">DevYoddha — autonomous LLM calling agents serving the HR community in production, owned end to end from architecture to on-call</div>
                 </div>
                 <div class="ach-card reveal">
                     <div class="ach-glow"></div>
                     <div class="ach-metric"><span class="ach-num">0</span><span class="ach-unit">CVE</span></div>
                     <div class="ach-name">Zero Critical CVEs</div>
-                    <div class="ach-desc">Zero HIGH/CRITICAL CVEs reaching production via SBOM generation, image scanning, and pinned base images in banking pipelines</div>
+                    <div class="ach-desc">Zero HIGH/CRITICAL CVEs reaching production via SBOM generation, image scanning, and pinned base images — the same supply-chain discipline applied to AI service containers</div>
                 </div>
                 <div class="ach-card reveal">
                     <div class="ach-glow"></div>
-                    <div class="ach-metric"><span class="ach-num counter" data-target="10">0</span><span class="ach-unit">+</span></div>
-                    <div class="ach-name">Production Clusters</div>
-                    <div class="ach-desc">Managed SLOs/SLIs across 10+ production Kubernetes clusters with automated HPA and Cluster Autoscaler scaling</div>
+                    <div class="ach-metric"><span class="ach-num counter" data-target="100">0</span><span class="ach-unit">%</span></div>
+                    <div class="ach-name">Schema-Validated Agent Output</div>
+                    <div class="ach-desc">Every agent response constrained to a JSON schema and validated before release — no free-form text reaches a downstream system or a decision-maker</div>
                 </div>
                 <div class="ach-card reveal">
                     <div class="ach-glow"></div>
-                    <div class="ach-metric"><span class="ach-num counter" data-target="40">0</span><span class="ach-unit">%</span></div>
-                    <div class="ach-name">Fewer Failed Releases</div>
-                    <div class="ach-desc">40% reduction in failed releases at Accenture through GitHub Actions pipelines with integrated quality checks and rollback strategies</div>
+                    <div class="ach-metric"><span class="ach-num counter" data-target="2">0</span><span class="ach-unit">+ yrs</span></div>
+                    <div class="ach-name">LLM Apps in Production</div>
+                    <div class="ach-desc">Two-plus years running LLM applications under real load — retrieval, tool calling, evals in CI, cost and quality telemetry, and prompt rollbacks</div>
                 </div>
             </div>
         </div>
@@ -596,7 +880,7 @@
     ═══════════════════════════════════════════ -->
     <section id="projects" class="section">
         <div class="section-wrap">
-            <div class="section-eyebrow">05 — Projects</div>
+            <div class="section-eyebrow">07 — Projects</div>
             <h2 class="section-heading">Featured Projects</h2>
 
             <div class="projects-grid">
@@ -615,11 +899,12 @@
                         <span class="proj-featured-label">⭐ Featured — Led End-to-End</span>
                         <span class="proj-live-badge"><span class="live-dot"></span> Live</span>
                     </div>
-                    <h3 class="proj-title">DevYoddha — Agentic AI Calling Platform</h3>
-                    <p class="proj-desc">Led the <strong>end-to-end design, development, and cloud deployment</strong> of DevYoddha (<a href="https://devyoddha.com/" target="_blank" class="proj-link">devyoddha.com</a>) — a live agentic AI platform purpose-built for the <strong>HR community</strong>. The platform features autonomous AI calling agents that handle candidate screening, scheduling, and real-time engagement workflows. Engineered the complete cloud-native infrastructure, deployment pipelines, and AI integration stack from zero to production — handling real HR use cases at scale.</p>
+                    <h3 class="proj-title">DevYoddha — Production Agent System over HR Data</h3>
+                    <p class="proj-desc">A <strong>live agentic AI platform for the HR community</strong> (<a href="https://devyoddha.com/" target="_blank" class="proj-link">devyoddha.com</a>), owned end to end. Autonomous calling agents run an explicit <strong>planner → tool → critic graph</strong> with bounded steps and <strong>escalation to a human recruiter</strong> when confidence drops. <strong>Tool calling</strong> against deterministic backend functions, <strong>JSON-schema structured output</strong> validated by Pydantic, <strong>retrieval</strong> over candidate and role documents backed by <strong>PostgreSQL + pgvector</strong>, and <strong>Git-versioned prompts</strong> gated by golden-set evals in CI. React/TypeScript operator console, FastAPI backend, containerised CI/CD, and full per-conversation trace logging.</p>
                     <div class="proj-tech">
-                        <span>Agentic AI</span><span>LLM / RAG</span><span>Python / FastAPI</span><span>Azure AKS</span>
-                        <span>Terraform</span><span>GitHub Actions</span><span>Docker</span><span>Voice AI</span><span>HR Tech</span>
+                        <span>Agentic Workflows</span><span>Tool Calling</span><span>Structured Output</span><span>Prompt Versioning</span>
+                        <span>PostgreSQL + pgvector</span><span>Python 3.11 / FastAPI</span><span>React · TypeScript</span>
+                        <span>Docker</span><span>GitHub Actions</span><span>Voice AI</span><span>HR Tech</span>
                     </div>
                 </div>
 
@@ -633,10 +918,10 @@
                         </div>
                     </div>
                     <span class="proj-live-badge"><span class="live-dot"></span> Live</span>
-                    <h3 class="proj-title">AI-Powered Portfolio &amp; RAG Chatbot</h3>
-                    <p class="proj-desc">Built an intelligent portfolio website with a Retrieval-Augmented Generation (RAG) chatbot (Maverick AI) powered by AWS Bedrock and LLMs. Vectorized resume documents stored in a cloud-native Python backend on GCP Cloud Run.</p>
+                    <h3 class="proj-title">Retrieval Service — Document RAG API</h3>
+                    <p class="proj-desc">A production <strong>FastAPI</strong> retrieval service behind this site: PDF ingestion and chunking, embedding generation, a <strong>cosine-similarity vector store</strong>, and top-k retrieval feeding grounded LLM answers with citations back to the source document. Pydantic request/response contracts throughout, containerised and deployed to <strong>Cloud Run</strong> via CI/CD — the same retrieval pattern I run on <strong>pgvector</strong> when PostgreSQL is the system of record.</p>
                     <div class="proj-tech">
-                        <span>AWS Bedrock</span><span>Python</span><span>FastAPI</span><span>LLM/RAG</span><span>Docker</span><span>GCP Cloud Run</span>
+                        <span>Python</span><span>FastAPI</span><span>Pydantic</span><span>Embeddings</span><span>Vector Search</span><span>RAG</span><span>Docker</span><span>Cloud Run</span>
                     </div>
                 </div>
 
@@ -709,7 +994,7 @@
     ═══════════════════════════════════════════ -->
     <section id="certifications" class="section section-alt">
         <div class="section-wrap">
-            <div class="section-eyebrow">06 — Credentials</div>
+            <div class="section-eyebrow">08 — Credentials</div>
             <h2 class="section-heading">Certifications</h2>
 
             <div class="certs-grid">
@@ -797,7 +1082,7 @@
     ═══════════════════════════════════════════ -->
     <section id="education" class="section">
         <div class="section-wrap">
-            <div class="section-eyebrow">07 — Education</div>
+            <div class="section-eyebrow">09 — Education</div>
             <h2 class="section-heading">Academic Background</h2>
 
             <div class="edu-card reveal">
@@ -826,7 +1111,7 @@
     ═══════════════════════════════════════════ -->
     <section id="community" class="section section-alt">
         <div class="section-wrap">
-            <div class="section-eyebrow">08 — Community</div>
+            <div class="section-eyebrow">10 — Community</div>
             <h2 class="section-heading">DevYoddha Community</h2>
 
             <div class="comm-layout">
@@ -871,9 +1156,9 @@
     ═══════════════════════════════════════════ -->
     <section id="contact" class="section">
         <div class="section-wrap">
-            <div class="section-eyebrow">09 — Contact</div>
+            <div class="section-eyebrow">11 — Contact</div>
             <h2 class="section-heading">Let's Connect</h2>
-            <p class="contact-subtitle">Open to UAE-based senior DevOps / SRE, platform engineering, and <strong>Agentic AI / MLOps</strong> roles. Fintech, banking, enterprise cloud transformation &amp; AI infrastructure welcome. Let's build something intelligent together.</p>
+            <p class="contact-subtitle">Open to <strong>Full Stack AI Engineer</strong> roles in the UAE — production agent systems over enterprise HR and finance data. Abu Dhabi-based and available for hybrid from day one. Let's build something people can actually trust their decisions to.</p>
 
             <div class="contact-layout">
                 <div class="contact-links-col">
@@ -912,7 +1197,7 @@
                         <div class="cl-body"><div class="cl-label">DevYoddha Platform</div><div class="cl-val">devyoddha.com — Live Agentic AI</div></div>
                         <div class="cl-arrow"><i class="fas fa-arrow-right"></i></div>
                     </a>
-                    <a href="./resume.pdf" download="Mishal_Yadav_DevOps_Resume.pdf" class="contact-link reveal">
+                    <a href="./resume.pdf" download="Mishal_Yadav_AI_Engineer_Resume.pdf" class="contact-link reveal">
                         <div class="cl-icon pdf-icon"><i class="fas fa-file-pdf"></i></div>
                         <div class="cl-body"><div class="cl-label">Resume</div><div class="cl-val">Download PDF Resume</div></div>
                         <div class="cl-arrow"><i class="fas fa-download"></i></div>
@@ -925,16 +1210,18 @@
                             <span class="avail-green-dot"></span>
                             <span>Available for opportunities in UAE</span>
                         </div>
-                        <h3>Senior DevOps / SRE &amp; Agentic AI Engineer</h3>
-                        <p>Bringing 8+ years of cloud-native expertise — now supercharged with Agentic AI, RAG &amp; MLOps — to UAE's financial sector and AI-driven tech ecosystem. Multi-cloud, fintech-ready, AI-native.</p>
+                        <h3>Full Stack AI Engineer — Production Agent Systems</h3>
+                        <p>8+ years engineering, 2+ years of LLM applications running in production, and a banking-grade instinct for controls. Built for teams where the output of an agent drives a real decision.</p>
                         <ul class="avail-list">
-                            <li><i class="fas fa-check"></i> Agentic AI &amp; AI Automation Engineering</li>
-                            <li><i class="fas fa-check"></i> Python RAG Pipelines · MLOps / LLMOps Deployment</li>
-                            <li><i class="fas fa-check"></i> AWS Bedrock · LLMs · Generative AI on Cloud</li>
-                            <li><i class="fas fa-check"></i> Azure AKS &amp; Multi-Cloud Platform Engineering</li>
-                            <li><i class="fas fa-check"></i> SRE · SLO/SLI Management · Kubernetes at Scale</li>
-                            <li><i class="fas fa-check"></i> GitOps CI/CD &amp; DevSecOps Zero-CVE Pipelines</li>
-                            <li><i class="fas fa-check"></i> Fintech &amp; Banking DevOps (ADCB experience)</li>
+                            <li><i class="fas fa-check"></i> Agentic workflows — planning, escalation, trace logging</li>
+                            <li><i class="fas fa-check"></i> Tool calling · structured output · retrieval · prompt versioning</li>
+                            <li><i class="fas fa-check"></i> Python 3.11+ · FastAPI · Pydantic · pandas · openpyxl</li>
+                            <li><i class="fas fa-check"></i> PostgreSQL · pgvector · advanced SQL</li>
+                            <li><i class="fas fa-check"></i> React &amp; TypeScript front ends for agent operators</li>
+                            <li><i class="fas fa-check"></i> Azure OpenAI · private endpoints · Entra ID · Key Vault</li>
+                            <li><i class="fas fa-check"></i> Data validation, reconciliation &amp; outlier detection</li>
+                            <li><i class="fas fa-check"></i> SAP / ERP &amp; spreadsheet ingestion for HR &amp; finance data</li>
+                            <li><i class="fas fa-check"></i> End-to-end production ownership — SLOs, rollback, on-call</li>
                         </ul>
                         <div class="avail-loc">
                             <i class="fas fa-map-marker-alt accent-text"></i>
@@ -951,14 +1238,16 @@
         <div class="footer-inner">
             <div class="footer-col">
                 <div class="footer-logo">MY<span class="accent">.</span></div>
-                <p>Senior DevOps / SRE &amp; Agentic AI Engineer<br>Abu Dhabi, UAE 🇦🇪</p>
-                <p class="footer-sub">Agentic AI · RAG · MLOps · Multi-Cloud · DevSecOps</p>
+                <p>Full Stack AI Engineer — Production LLM &amp; Agent Systems<br>Abu Dhabi, UAE 🇦🇪</p>
+                <p class="footer-sub">Agentic Workflows · Azure OpenAI · Python · PostgreSQL + pgvector · React/TS · Data Quality</p>
                 <p class="footer-copy">© 2025 Mishal Yadav. All rights reserved.</p>
             </div>
             <div class="footer-col">
                 <div class="footer-nav-title">Navigate</div>
                 <div class="footer-nav">
                     <a href="#about">About</a>
+                    <a href="#ai-systems">AI Systems</a>
+                    <a href="#role-fit">Role Fit</a>
                     <a href="#experience">Experience</a>
                     <a href="#skills">Skills</a>
                     <a href="#projects">Projects</a>
@@ -974,7 +1263,7 @@
                     <a href="mailto:mishal2875@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
                     <a href="https://wa.me/971585939475" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     <a href="https://devyoddha.com/" target="_blank" title="DevYoddha"><i class="fas fa-robot"></i></a>
-                    <a href="./resume.pdf" download="Mishal_Yadav_DevOps_Resume.pdf" title="Download Resume"><i class="fas fa-file-pdf"></i></a>
+                    <a href="./resume.pdf" download="Mishal_Yadav_AI_Engineer_Resume.pdf" title="Download Resume"><i class="fas fa-file-pdf"></i></a>
                 </div>
             </div>
         </div>

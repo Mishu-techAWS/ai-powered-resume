@@ -123,17 +123,19 @@ document.addEventListener('DOMContentLoaded', () => {
   ────────────────────────────────────────────────────── */
   const typedEl    = document.getElementById('typed-text');
   const phrases    = [
-    'Agentic AI & Automation Engineering',
-    'Python RAG Pipelines & Vector Search',
-    'MLOps · LLMOps · Model Deployment',
-    'AWS Bedrock & Generative AI on the Cloud',
-    'AI-Driven Ops Automation (AIOps)',
-    'Multi-Cloud AWS · Azure · GCP',
-    'Kubernetes SRE & Observability',
-    'GitOps CI/CD at Scale',
-    'DevSecOps Zero-CVE Pipelines',
-    'Fintech & Banking DevOps',
+    'Production LLM Applications',
+    'Agentic Workflows · LangGraph & Semantic Kernel',
+    'Tool Calling & Structured Output',
+    'Retrieval over PostgreSQL + pgvector',
+    'Prompt Versioning & Eval Harnesses',
+    'Azure OpenAI — Enterprise-Hosted',
+    'Python 3.11 · FastAPI · pandas',
+    'React & TypeScript Front Ends',
+    'SAP & Spreadsheet Data Integration',
+    'Validation · Reconciliation · Outlier Detection',
+    'End-to-End Production Ownership',
   ];
+
   let pi = 0, ci = 0, deleting = false;
   const TYPING_SPEED  = 80;
   const DELETING_SPEED = 45;

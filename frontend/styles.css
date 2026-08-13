@@ -2095,3 +2095,242 @@ a.cert-card:hover .cert-status-badge.verified {
 @media (max-width: 620px) {
   .video-scene .float-chip { display: none; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   AI ENGINEER POSITIONING — new component styles
+═══════════════════════════════════════════════════════════ */
+
+/* ── Section sub-headline ── */
+.section-sub {
+  max-width: 780px;
+  margin: -18px 0 42px;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-2);
+}
+.section-sub strong { color: var(--text-1); font-weight: 600; }
+
+/* ── New chip / pill / icon colour variants ── */
+.mc-chip.pg-chip { background: rgba(51,103,145,0.14); border-color: rgba(65,105,225,0.35); color: #7aa7d9; }
+.mc-chip.ts-chip { background: rgba(49,120,198,0.14); border-color: rgba(97,218,251,0.35); color: #61dafb; }
+.mc-chip.dq-chip { background: rgba(16,185,129,0.12); border-color: rgba(16,185,129,0.35); color: #34d399; }
+
+.pg-pill { background: rgba(51,103,145,0.14); border-color: rgba(65,105,225,0.3); color: #7aa7d9; }
+.ts-pill { background: rgba(49,120,198,0.14); border-color: rgba(97,218,251,0.3); color: #61dafb; }
+.pd-pill { background: rgba(16,185,129,0.12); border-color: rgba(16,185,129,0.3); color: #34d399; }
+
+.pg-color  { background: rgba(51,103,145,0.16); color: #7aa7d9; }
+.dq-color  { background: rgba(16,185,129,0.12); color: #34d399; }
+.ts-color  { background: rgba(97,218,251,0.12); color: #61dafb; }
+.int-color { background: rgba(245,158,11,0.12); color: #f5b342; }
+
+.nav-link-fit { color: var(--purple) !important; }
+
+/* ── Experience: AI-lead card ── */
+.tl-card-ai { border-color: rgba(139,92,246,0.32); background: linear-gradient(135deg, #16122a 0%, #0f1420 100%); }
+.tl-fintech-strip.ai-strip {
+  color: #a78bfa;
+  background: rgba(139,92,246,0.1);
+  border-color: rgba(139,92,246,0.28);
+}
+.devyoddha-color { background: rgba(139,92,246,0.16); color: #a78bfa; }
+.tl-badge.ai-badge {
+  background: rgba(139,92,246,0.14);
+  border: 1px solid rgba(139,92,246,0.35);
+  color: #a78bfa;
+}
+
+/* ── AI SYSTEMS — pipeline cards ── */
+.pipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+.pipe-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px 24px 22px;
+  transition: var(--transition);
+  overflow: hidden;
+}
+.pipe-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--purple), var(--accent));
+  opacity: 0.55;
+  transition: var(--transition);
+}
+.pipe-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(139,92,246,0.35);
+  background: var(--bg-card-hover);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.45), var(--shadow-purple-glow);
+}
+.pipe-card:hover::before { opacity: 1; }
+.pipe-step {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.06);
+  letter-spacing: -0.02em;
+}
+.pipe-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  background: rgba(139,92,246,0.12);
+  color: #a78bfa;
+  margin-bottom: 14px;
+}
+.pipe-card h3 {
+  font-size: 1.06rem;
+  font-weight: 600;
+  color: var(--text-1);
+  margin-bottom: 10px;
+}
+.pipe-card p {
+  font-size: 0.9rem;
+  line-height: 1.72;
+  color: var(--text-2);
+  margin-bottom: 16px;
+}
+.pipe-card p strong { color: var(--text-1); font-weight: 600; }
+.pipe-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.pipe-tags span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.66rem;
+  padding: 4px 9px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  color: var(--text-2);
+}
+
+/* ── Engineering principles strip ── */
+.principles-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 18px;
+  margin-top: 32px;
+  padding: 26px 24px;
+  background: linear-gradient(135deg, rgba(139,92,246,0.07), rgba(0,212,255,0.04));
+  border: 1px solid rgba(139,92,246,0.2);
+  border-radius: var(--radius-lg);
+}
+.prin { display: flex; gap: 13px; align-items: flex-start; }
+.prin > i {
+  flex: none;
+  margin-top: 3px;
+  font-size: 0.95rem;
+  color: var(--purple);
+}
+.prin strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-1);
+  margin-bottom: 4px;
+}
+.prin span {
+  display: block;
+  font-size: 0.82rem;
+  line-height: 1.62;
+  color: var(--text-2);
+}
+
+/* ── ROLE FIT — requirement map ── */
+.fit-grid { display: flex; flex-direction: column; gap: 12px; }
+.fit-row {
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  gap: 18px;
+  align-items: flex-start;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid rgba(16,185,129,0.5);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  transition: var(--transition);
+}
+.fit-row:hover {
+  background: var(--bg-card-hover);
+  border-left-color: var(--green);
+  transform: translateX(3px);
+}
+.fit-check {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(16,185,129,0.14);
+  color: var(--green);
+  font-size: 0.8rem;
+}
+.fit-req {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-1);
+  margin-bottom: 7px;
+  line-height: 1.5;
+}
+.fit-ev {
+  font-size: 0.875rem;
+  line-height: 1.72;
+  color: var(--text-2);
+}
+.fit-ev strong { color: var(--accent); font-weight: 600; }
+.fit-tag {
+  flex: none;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 5px 11px;
+  border-radius: 99px;
+  background: rgba(16,185,129,0.1);
+  border: 1px solid rgba(16,185,129,0.28);
+  color: #34d399;
+  white-space: nowrap;
+}
+.fit-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 18px 22px;
+  border-radius: var(--radius);
+  background: rgba(0,212,255,0.05);
+  border: 1px solid var(--border-bright);
+  font-size: 0.92rem;
+  color: var(--text-2);
+  line-height: 1.6;
+}
+.fit-note i { color: var(--accent); font-size: 1.05rem; }
+.fit-note strong { color: var(--text-1); }
+
+@media (max-width: 720px) {
+  .fit-row { grid-template-columns: 32px 1fr; gap: 14px; padding: 18px; }
+  .fit-tag { grid-column: 2; justify-self: start; margin-top: 10px; }
+  .pipe-card { padding: 22px 20px 20px; }
+  .section-sub { margin-bottom: 32px; }
+}
+
+/* Nav gained two links (AI Systems, Role Fit) — tighten spacing before the
+   hamburger breakpoint so the bar doesn't crowd the resume button. */
+@media (max-width: 1180px) and (min-width: 769px) {
+  .nav-links { gap: 2px; }
+  .nav-links li a { font-size: 0.8rem; padding: 6px 9px; }
+  .nav-resume { font-size: 0.8rem; }
+}
