@@ -123,17 +123,16 @@ document.addEventListener('DOMContentLoaded', () => {
   ────────────────────────────────────────────────────── */
   const typedEl    = document.getElementById('typed-text');
   const phrases    = [
-    'Production LLM Applications',
-    'Agentic Workflows · LangGraph & Semantic Kernel',
-    'Tool Calling & Structured Output',
-    'Retrieval over PostgreSQL + pgvector',
-    'Prompt Versioning & Eval Harnesses',
-    'Azure OpenAI — Enterprise-Hosted',
-    'Python 3.11 · FastAPI · pandas',
-    'React & TypeScript Front Ends',
-    'SAP & Spreadsheet Data Integration',
-    'Validation · Reconciliation · Outlier Detection',
-    'End-to-End Production Ownership',
+    'Site Reliability Engineering · SLOs & SLIs',
+    'Production Kubernetes — AKS · GKE · OpenShift',
+    'Deploying AI Agents on Kubernetes',
+    'Platform Engineering & Self-Service Delivery',
+    'Infrastructure as Code — Terraform & Bicep',
+    'GitOps CI/CD — Argo CD · Helm · Azure DevOps',
+    'LLMOps — Azure OpenAI · Secure Model Hosting',
+    'Observability — Prometheus · Grafana · Azure Monitor',
+    'DevSecOps — Zero-CVE Pipelines',
+    'Zero-Downtime Releases · 99.9% Uptime',
   ];
 
   let pi = 0, ci = 0, deleting = false;
