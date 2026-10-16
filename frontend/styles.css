@@ -2334,3 +2334,32 @@ a.cert-card:hover .cert-status-badge.verified {
   .nav-links li a { font-size: 0.8rem; padding: 6px 9px; }
   .nav-resume { font-size: 0.8rem; }
 }
+
+/* ──────────────────────────────────────────────────────────
+   AI PRODUCTS (portfolio showcase cards)
+────────────────────────────────────────────────────────── */
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+.products-grid .proj-featured { grid-column: auto; }
+.products-grid .proj-desc { margin-bottom: 14px; }
+.products-grid .tl-bullets { margin-bottom: 16px; }
+.prod-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.prod-metrics span {
+  font-size: 0.78rem;
+  color: var(--text-2);
+  background: rgba(16,185,129,0.08);
+  border: 1px solid rgba(16,185,129,0.28);
+  padding: 5px 12px;
+  border-radius: 99px;
+}
+.prod-metrics strong { color: var(--green); }
+.crb-company .proj-link { text-decoration: none; }
+.crb-company .proj-link:hover { text-decoration: underline; }

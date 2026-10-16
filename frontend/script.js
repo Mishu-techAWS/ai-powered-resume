@@ -123,16 +123,16 @@ document.addEventListener('DOMContentLoaded', () => {
   ────────────────────────────────────────────────────── */
   const typedEl    = document.getElementById('typed-text');
   const phrases    = [
-    'Site Reliability Engineering · SLOs & SLIs',
-    'Production Kubernetes — AKS · GKE · OpenShift',
-    'Deploying AI Agents on Kubernetes',
-    'Platform Engineering & Self-Service Delivery',
-    'Infrastructure as Code — Terraform & Bicep',
-    'GitOps CI/CD — Argo CD · Helm · Azure DevOps',
-    'LLMOps — Azure OpenAI · Secure Model Hosting',
-    'Observability — Prometheus · Grafana · Azure Monitor',
-    'DevSecOps — Zero-CVE Pipelines',
-    'Zero-Downtime Releases · 99.9% Uptime',
+    'AI Product Delivery — Prototype to Production',
+    'AI Voice Screening Agents (Hirova.co)',
+    'Semantic Matching · Vector Embeddings · RAG',
+    'Predictive ML for Luxury Retail (House of ME)',
+    'Agentic AI Workflows & Automation',
+    'LLM Integration — OpenAI · Azure OpenAI · Claude',
+    'Responsible AI — Confidence Scores & Human Review',
+    'Python · FastAPI · REST APIs',
+    'AI Deployments on AWS · Azure · Kubernetes',
+    'CI/CD · IaC · Production-Grade AI Releases',
   ];
 
   let pi = 0, ci = 0, deleting = false;
